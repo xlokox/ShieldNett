@@ -1,0 +1,147 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  
+  .hero-header {
+    min-height: 100vh;
+    background-image: url('/photos/AboutUsSection.webp');
+    background-size: cover; 
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  /* Position the .top-bar at the very top */
+  /* Position the .top-bar at the very top with no padding at the top */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px 50px; /* Remove padding at the top */
+    margin: 0 auto; /* No vertical margin */
+    max-width: 1440px; /* Adjust to fit your design */
+    width: 100%; /* Stretch across width */
+    background: rgba(0, 0, 0, 0.5); /* Check if this background is needed as it may appear as space */
+    position: absolute; /* Absolute position */
+    top: 0; /* Align to top of the header */
+    left: 0; /* Align to left of the header */
+    z-index: 10; /* Make sure it's on top of other content */
+  }
+  
+  
+  /* Rest of your styles */
+  
+  
+  
+  .logo-container .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .top-nav .nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .top-nav .nav-list li {
+    padding: 0 35px;
+  }
+  
+  
+  .top-nav .nav-list li a {
+    text-decoration: none;
+    color: #fffcfc;
+    font-size: 15px;
+  }
+  
+
+  
+  
+  .hero-content h1 {
+      font-size: 4vw; /* Responsive font size based on the width of the viewport */
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+      line-height: 1.2; /* Adjust line height for better readability */
+      margin: 0; /* Reset margin */
+      padding: 0 2vw; /* Padding on the sides */
+      color: #000000; /* White color for the text */
+  
+  }
+  
+  .hero-content p {
+    font-size: 1.5vw;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    line-height: 1.4;
+    margin: 10px 0; /* Space above and below paragraph */
+    padding: 0 2vw;
+    color: #000000; /* White color for the text */
+  }
+  
+  .hero-buttons .btn {
+    padding: 10px 30px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+  }
+
+  
+ 
+  /* Add the rest of your CSS styles here */
+  
+  
+  
+  
+  
+  /* The rest of your CSS goes here */
+  
+  /* Ensure the text stands out over the image */
+  .hero-content h1,
+  .hero-content p {
+    display: inline-block;
+    background-color:black(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .hero-buttons {
+    margin-top: 30px;
+  }
+  
+  /* The rest of your CSS for buttons and other elements */
+  .sulphur-point-light {
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: 300;
+  }
+  
+  .sulphur-point-regular {
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: 400;
+  }
+  
+  .sulphur-point-bold {
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: 700;
+  }
