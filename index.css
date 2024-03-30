@@ -12,7 +12,7 @@
 @import url("/Future.css");
 @import url("/script.js");
 @import url("/mobile.css");
-@import url('/vars.css'); /* Import the variables from the separate file */
+@import url('/vars.css'); 
 
 
 
@@ -25,8 +25,7 @@
 
 
 
-/* Basic reset for styling */
-/* Add your previous styles here... */
+
 
 
   
