@@ -1,62 +1,109 @@
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Border-box model */
 }
 
 
 body {
+
   display: flex;
   flex-direction: column;
-}
+  font-family: 'Sulphur Point', sans-serif;
 
-html, body {
+}
+/* Ensure any default margins and paddings are reset */
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+  .sulphur-point-light {
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: 300;
+  }
+  
+  .sulphur-point-regular {
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: 400;
+  }
+  
+  .sulphur-point-bold {
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: 700;
+  }
+  :root {
+    --transition-speed: 0.3s; /* Adjust the speed as needed */
+    --blur-amount: 5px; /* Adjust the blur amount as needed */
+  }
+  
 
-.hero-header {
-  min-height: 100vh;
-  background-image: url('./photos/HeroSection.webp');
-  background-size: cover; 
-  background-position: center; /* Center the background */
-  background-repeat: no-repeat;
-  display:grid;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-
+  .hero-header {
+    min-height: 100vh; /* Minimum height to fill the viewport height */
+    background-image: url('/photos/HeroSection.webp'); /* Path to your image */
+    background-size: cover; 
+    background-position: center; /* Center the background */
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;      
+        margin-top: -30px; /* Adjust this value if there is a gap due to the .top-bar */
+        padding-top: 20px; /* Compensate for negative margin if needed */
+        background-attachment: fixed;
+        position: relative; /* Optional: Keeps the background fixed during scroll */
+    
+  }
+  .hero-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent overlay */
+    z-index: -1; /* Behind the text */
+    transition: opacity var(--transition-speed) ease, filter var(--transition-speed) ease;
+    opacity: 0; /* Fully transparent by default */
+    filter: blur(0); /* No blur by default */
+  }
+  .hero-header:hover::after {
+    opacity: 1; /* Fully visible on hover */
+    filter: blur(var(--blur-amount)); /* Apply blur on hover */
+  }
+  
+  .hero-content {
+    filter: blur(4px); /* Adjust the blur amount as needed */
+    transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+  }
+  
+  /* Remove blur on hover */
+  .hero-content:hover {
+    filter: blur(0);
+  }
+  
+  /* Class to control blur via JavaScript */
+  .blur-effect {
+    filter: blur(4px);
+  }
+  
 /* Position the .top-bar at the very top */
 /* Position the .top-bar at the very top with no padding at the top */
 .top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* Align items to the start */
-  padding: 20px 50px; /* Remove padding at the top */
-  margin: 0 auto; /* No vertical margin */
-  max-width: 1440px; /* Adjust to fit your design */
-  width: 100%; /* Stretch across width */
-  background: rgba(0, 0, 0, 0.5); /* Check if this background is needed as it may appear as space */
-  position: absolute; /* Absolute position */
-  top: 0; /* Align to top of the header */
-  left: 0; /* Align to left of the header */
-  z-index: 10; /* Make sure it's on top of other content */
+  position: fixed; /* Fixed at the top */
+  top: 0;
+  left: 0;
+  right: 0; /* Stretch across the full width */
+  z-index: 1; /* Ensure it's above the .hero-header-about section */
+  
 }
-
-
 /* Rest of your styles */
 
 
 
 .logo-container .logo {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 30px;
+  color: white;
 }
 
 .top-nav .nav-list {
@@ -64,24 +111,6 @@ html, body {
   display: flex;
   justify-content: flex-end;
 }
-
-.top-nav .nav-list li {
-  padding: 0 35px;
-}
-
-
-.top-nav .nav-list li a {
-  text-decoration: none;
-  color: #fffcfc;
-  font-size: 15px;
-}
-
-.hero-content {
-  margin-top: 40px;
-}
-
-
-
 .hero-content h1 {
     font-size: 4vw; /* Responsive font size based on the width of the viewport */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
@@ -93,6 +122,7 @@ html, body {
 
 }
 
+
 .hero-content p {
   font-size: 1.5vw;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
@@ -102,6 +132,7 @@ html, body {
   color: #ffffff; /* White color for the text */
   background-color:  rgba(0, 0, 0, 0.5);
 }
+
 
 .hero-buttons .btn {
   padding: 10px 30px;
@@ -138,39 +169,6 @@ html, body {
 
 
 
-
-/* The rest of your CSS goes here */
-
-/* Ensure the text stands out over the image */
-.hero-content h1,
-.hero-content p {
-  display: inline-block;
-  background-color:black(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.hero-buttons {
-  margin-top: 30px;
-}
-
-/* The rest of your CSS for buttons and other elements */
-.sulphur-point-light {
-  font-family: 'Sulphur Point', sans-serif;
-  font-weight: 300;
-}
-
-.sulphur-point-regular {
-  font-family: 'Sulphur Point', sans-serif;
-  font-weight: 400;
-}
-
-.sulphur-point-bold {
-  font-family: 'Sulphur Point', sans-serif;
-  font-weight: 700;
-}
-
-
 /* Ensure main content takes up the space it needs, pushing the footer down */
 main {
   flex: 1;
@@ -186,19 +184,8 @@ main {
   border-radius: 100px;
 }
 
-.container .main-titlefirst {
-  font-size: 3rem; /* Large font size for the main title */
-  font-weight: bold; /* Bold font weight for the title */
-  margin-bottom: 20px; /* Space between the title and subtitle */
-  color: #000; /* Set the color of the title text */
-}
 
-.container .main-subtitlefirst {
-  font-size: 1.2rem; /* Smaller font size for the subtitle */
-  color: #555; /* Dark grey color for the subtitle text */
-  margin-bottom: 20px; /* Space below the subtitle */
-  
-}
+
 /*Pictures of the top Main Section */
 .features-container {
     display: flex;
@@ -212,7 +199,7 @@ main {
 
 .feature {
     width: calc(33.333% - 40px); /* Adjust the spacing based on your design */
-    margin: 20px; /* This provides space between the columns */
+    margin: 10px; /* This provides space between the columns */
     text-align: center;
 }
 
@@ -220,23 +207,6 @@ main {
   width: 30%; /* Adjust the width as needed */
   margin: 10px; /* Spacing around each feature */
   text-align: center; /* Center the text within each feature */
-}
-
-
-.features-container .feature img {
-  border-radius: 20px; /* Adds rounded corners with a radius of 20 pixels */
-  display: block; /* Removes bottom space/margin under the image */
-  width: 95%; /* Ensures the image fills the container */
-  height: auto;
-  border-radius: 10px; /* This value can be adjusted to create more or less rounded corners */
-  overflow: hidden;
-   /* Keeps the image aspect ratio */
-}
-.feature-container {
-  /* This is the container for each feature, which includes the image and text below it */
-  text-align: center; /* Center the text below the image */
-  margin: 20px; /* Add some space around the container */
-  
 }
 
 .feature-image {
@@ -263,35 +233,80 @@ main {
   color: #007bff; /* Link color */
 }
 
-.learn-more:hover {
-  text-decoration: underline; /* Add underline on hover for better UX */
+
+
+/* Testimonial Section */ 
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* Adds space between items */
+  padding: 20px;
 }
 
-
-
-.feature h3 {
-    color: #000; /* Adjust color as needed */
-    margin-bottom: 10px;
+.testimonial {
+  flex: 1 1 100%; /* On mobile, each testimonial takes full width, but can grow and shrink as needed */
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px; /* Adds padding inside each testimonial */
+  background: #fff; /* Optional: adds a background color */
+  border-radius: 10px; /* Optional: rounds corners */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for depth */
 }
 
-.feature p {
-    color: #666; /* Adjust color as needed */
-    margin-bottom: 20px;
+.testimonial img {
+  width: 240px; /* Adjusted width for better visibility */
+  height: 240px; /* Adjusted height to match width */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  border-radius: 50%; /* Makes images circular */
+  margin: 0 auto 15px; /* Center image and add margin below */
+}
+.testimonial-logo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Makes the image round */
+  border: 2px solid #ddd; /* Adds a border around the image */
 }
 
-.learn-more {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+.testimonial-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.learn-more:hover {
-    text-decoration: underline;
+.testimonial-author {
+  font-size: 1em;
+  margin-bottom: 15px;
 }
+
+.learn-more-btn {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px; /* Adjust padding to control button size */
+  border-radius: 5px;
+  display: block; /* Makes the button take the full width of its container */
+  width: auto; /* Adjust width as needed */
+  margin: 0 auto; /* Center button horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+}
+
+.learn-more-btn:hover {
+  background-color: #0056b3;
+}
+.testimonial h3 {
+  font-size: 1.2em; /* Adjust the size as needed */
+  margin-bottom: 10px;
+}
+.testimonial p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
 
 /*Pictures of the top Main Section */
 
-.main-section {
+.main-section-index {
   max-width: 1080px;
   margin: 20px auto;
   padding: 40px;
@@ -300,7 +315,7 @@ main {
 
 .section-heading {
   color: #555;
-  font-weight: ;
+  font-weight: 10px;
   text-transform: uppercase;
   margin-bottom: 20px;
   
@@ -385,34 +400,33 @@ main {
 
 /* Pricing Section*/ 
 .pricing-options {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
   text-align: center;
+  padding: 40px 0;
 }
 
 .pricing-title {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
-  
+  font-size: 2rem; /* Adjust size as needed */
+  margin-bottom: 1rem; /* Space below the title */
+  font-family: 'Sulphur Point', sans-serif; /* Ensure you link this font in your HTML */
+  color: #333; /* Adjust text color as needed */
 }
+
 
 
 .plans {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Adjust the space between the plans */
+  gap: 30px;
+  margin-top: 2rem;
 }
 
+
 .plan {
-  flex: 1;
-  border: 1px solid #ddd;
-  border-radius: 10px; /* Rounded corners */
+  background: #ffffff; /* Background color for the plan */
   padding: 20px;
-  background-color: #fff; /* White background for the plans */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+  border-radius: 10px; /* Rounded corners for the plan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow for some depth */
+  width: 300px; /* Adjust width as needed */
 }
 
 .plan:hover {
@@ -421,32 +435,29 @@ main {
 }
 
 .plan-title {
-  font-size: 1.5rem;
-  color: #007bff; /* Theme color for titles */
-  margin-bottom: 25px;
-  
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: #333; /* Text color for the plan title */
+  margin-bottom: 1rem; /* Space below the plan title */
 }
 
 .price {
-  font-size: 2.5rem;
-  color: #333;
-  margin: 15px 0;
+  font-size: 2.5rem; /* Adjust size as needed */
+  color: #333; /* Text color for the price */
+  margin-bottom: 1rem; /* Space below the price */
 }
 
 .plan-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  text-align: left; /* Align text to the left within the plan */
+  margin-bottom: 2rem; /* Space below the feature list */
 }
+
 
 .plan-features li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #666;
-  display: flex;
-  align-items: center;
+  margin-bottom: 0.5rem; /* Space between list items */
+  font-family: 'Sulphur Point', sans-serif; /* Ensure you link this font in your HTML */
 }
-
 .verified-icon {
   color: #28a745; /* Bootstrap success color for the checkmark */
   font-size: 1.2rem;
@@ -454,22 +465,17 @@ main {
 }
 
 .plan-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-  text-transform: uppercase; /* A stylistic choice for buttons */
-  letter-spacing: 0.05rem; /* Spacing out letters for better readability */
-  width: 100%; /* Full width button */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners for the button */
+  transition: background-color 0.3s; /* Smooth background color transition on hover */
+  display: inline-block; /* Display as inline-block for proper padding and margin */
 }
 
 .plan-btn:hover {
-  background-color: #0056b3;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #0056b3; /* Darker background color on hover */
 }
 
 /* Styles for when no unique styles are needed for the 'Get started' buttons of each plan */
@@ -533,6 +539,58 @@ main {
   font-size: 0.8rem;
   color: #777;
 }
+
+.contact-section {
+  display: flex;
+  justify-content: space-between; /* Space between the text and image */
+  align-items: center; /* Vertical alignment */
+  padding: 40px;
+  max-width: 1000px; /* Adjust based on your layout width */
+  margin: auto; /* Centering the container */
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  font-family: 'Sulphur Point', sans-serif;
+
+}
+
+.contact-details {
+  width: 50%; /* Allocate width to the text section */
+  padding-right: 20px; /* Space between the text and the image */
+}
+
+.contact-image {
+  width: 50%; /* Allocate width to the image section */
+  text-align: center; /* Center the image if smaller than the allocated width */
+}
+
+.contact-header {
+  font-size: 2.5rem; /* Adjust the font size of the header */
+  margin-bottom: 0.5rem; /* Reduce space below the header */
+  color: #333; /* Dark color for the header for better contrast */
+}
+
+.contact-text {
+  font-size: 1rem; /* Standard font size for contact details */
+  color: #555; /* Dark grey color for contact text */
+  line-height: 1.5; /* Space between lines */
+  font-family: 'Sulphur Point', sans-serif;
+
+}
+
+.contact-details a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.contact-details a:hover {
+  text-decoration: underline; /* Add underline on hover for links */
+}
+
+/* Image styles */
+.contact-image img {
+  max-width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
 
 
 

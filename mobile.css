@@ -1,4 +1,414 @@
-/* Mobile Styles */
-@media screen and (max-width: 480px) {
 
+@media only screen and (max-width: 768px) {
+    /* Ensure the full menu is not displayed and only the hamburger is visible */
+    .top-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    
+
+/* Hide the navigation list by default in mobile view */
+.nav-list {
+    display: none;
+}
+
+/* Hamburger menu icon styles */
+.hamburger-menu {
+    display: block; /* Show the hamburger icon */
+    cursor: pointer;
+}
+
+/* When .show class is added to .nav-list, display it as a block */
+.nav-list.show {
+    display: block;
+}
+
+/* Hamburger bars */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+}
+
+
+/* Service Section */
+@media only screen and (max-width: 768px) {
+    /* Adjust hero content styling */
+    .hero-content {
+      padding: 15px; /* Adjust padding */
+    }
+  
+    .hero-content h1 {
+      font-size: 5vw; /* Larger font size for visibility on smaller screens */
+      margin-bottom: 20px; /* Add some space below the header */
+    }
+  
+    .hero-content p {
+      font-size: 4vw; /* Adjust font size for readability on small devices */
+    }
+  
+    /* Adjust buttons for easier touch navigation */
+    .hero-buttons .btn {
+      padding: 10px 20px; /* Adjust padding for the button */
+      font-size: 4vw; /* Adjust font size for the button text */
+      margin: 10px 2px; /* Adjust margins for better spacing */
+    }
+  
+    /* Increase tap target size for mobile users */
+    .hero-buttons {
+      margin-top: 20px;
+    }
+  }
+  
+/* We offer section "Ai Powered" */
+@media only screen and (max-width: 768px) {
+    .services-ai-firewall-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .services-content,
+    .services-image-placeholder {
+      width: 100%;
+    }
+  
+    .services-features {
+      flex-direction: column;
+    }
+  
+    .services-feature-item {
+      /* Adjust text sizes, margins, and padding for smaller screens */
+      margin: 10px 0;
+    }
+  
+    .services-buttons {
+      flex-direction: column;
+    }
+  
+    .services-btn-learn-more,
+    .services-btn-sign-up {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    /* Adjust the padding and margins for the mobile layout */
+    .services-content {
+      padding: 10px;
+    }
+  
+    .services-content-title {
+      font-size: calc(0.5em + 2vw); /* responsive font size */
+    }
+  
+    .services-description,
+    .services-feature-desc {
+      font-size: calc(0.50em + 1vw); /* responsive font size */
+    }
+  }
+
+  /* We offer section "Ai Powered" */
+
+  /* Mobile Section  */
+/* Styles for mobile devices */
+@media only screen and (max-width: 767px) {
+    .mobile-end-device-section,
+    .support-section {
+      display: block; /* Stack the image and text content */
+    }
+  
+    .mobile-end-device-content,
+    .support-content {
+      text-align: left; /* Align text to the left */
+      padding: 20px; /* Add some padding around the text */
+    }
+  
+    .mobile-end-device-image-placeholder,
+    .support-content .support-button {
+      width: 100%; /* Take the full width of the container */
+      margin-top: 20px; /* Add space above the image/button */
+      order: 2; /* Image/button will be displayed after the text on mobile */
+    }
+  
+    .mobile-end-device-buttons,
+    .support-button {
+      padding: 10px 20px; /* Larger padding for touch targets */
+      font-size: 1em; /* Suitable font size for mobile */
+      margin-top: 20px; /* Add some space above the buttons */
+      display: block; /* Display as block to take full width */
+      text-align: center; /* Center the button text */
+    }
+    
+    /* Adjust the image placeholder to display image properly */
+    .mobile-end-device-image-placeholder img {
+      max-width: 100%; /* Full width of its container */
+      height: auto; /* Maintain aspect ratio */
+      display: block; /* Display as block */
+      margin: 20px auto 0; /* Centered horizontally with margin top */
+    }
+  
+    /* Style for the button in the support section to make it stand out */
+    .support-button {
+      background-color: #007bff; /* Primary color for the button */
+      color: white; /* Text color for the button */
+      text-decoration: none; /* Remove underline */
+      border-radius: 5px; /* Rounded corners for the button */
+    }
+  }
+  
+  
+    .value-platform-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns for stats */
+      gap: 20px;
+    }
+  
+    .stat-item {
+      /* Ensure the stats look good on smaller screens */
+      margin: 10px 0;
+    }
+  
+    .support-button,
+    .value-platform-demo-link {
+      padding: 10px 20px; /* Larger touch targets */
+      font-size: calc(0.75em + 1vw);
+      margin-top: 20px; /* Space after paragraph */
+    }
+  
+    .stat-percentage {
+      font-size: calc(1.5em + 2vw); /* Large font size for emphasis */
+    }
+  
+    .stat-description {
+      font-size: calc(0.75em + 1vw); /* Readable font size */
+    }
+  
+  
+    /* Mobile Section  */
+
+        /* Plan Section  */
+
+@media only screen and (max-width: 768px) {
+  .plan-btn {
+    padding: 12px; /* Slightly less padding on smaller screens */
+    font-size: calc(0.75em + 1vw); /* Adjust font size based on viewport width */
+  }
+}
+
+    /* Plan Section  */
+
+
+/* Learn More btn */
+@media only screen and (max-width: 768px) {
+    .testimonials-container {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    .testimonial {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Enterprise Clients */
+  @media only screen and (max-width: 768px) {
+    .testimonial-container {
+      grid-template-columns: repeat(3, 1fr); /* Maintain a three-column layout */
+    }
+  
+    .testimonial {
+      /* Keep padding, or adjust as needed to fit the content */
+      padding: 10px;
+    }
+  
+    .testimonial-avatar {
+      /* Keep the avatar small to fit the layout */
+      width: 30px;
+      height: 30px;
+    }
+  
+    /* Adjust font sizes for readability on smaller screens */
+    .testimonial-section h2,
+    .testimonial p,
+    footer p,
+    footer span {
+      font-size: calc(0.75em + 1vw);
+    }
+  
+    /* Adjust button sizes for better clickability on touch devices */
+    .testimonial .learn-more-btn {
+      padding: 10px 20px;
+      font-size: calc(0.75em + 1vw);
+    }
+  }
+    /* Enterprise Clients */
+
+
+
+
+/* Handling responsiveness */
+@media (max-width: 768px) {
+    .contact-details,
+    .contact-image {
+      width: 100%; /* Full width on smaller screens */
+    }
+  
+    .contact-section {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+  }
+  
+
+  /*compranshive seciton */
+  /* Mobile Styles */
+/* Mobile CSS */
+@media only screen and (max-width: 767px) {
+
+
+    .service-item {
+      background: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: left; /* Align text to the left */
+      padding: 15px; /* Add some padding for better readability */
+    }
+ 
+      
+    .service-title {
+        font-size: 19px; /* Adjust the font size as necessary */
+        margin-top: 30px; /* Add a top margin */
+        color: #333; /* Adjust the color as necessary */
+        /* Ensure there's no text-indent or other properties affecting text alignment */
+      }
+    
+
+    }
+  
+    /*compranshive seciton */
+/* Email Image Section */
+@media only screen and (max-width: 767px) {
+    .email-services-section {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center-align the items */
+    }
+  
+    .email-services-image-placeholder {
+      order: 2; /* Image will move to the bottom */
+      width: 100%; /* Full width */
+      margin-top: 20px; /* Space above the image */
+    }
+  
+    .email-services-image-placeholder img {
+      max-width: 100%; /* Responsive image size */
+      height: auto;
+    }
+  }
+  
+  
+      /* Email Image Section */
+/* Optional: Add a media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .demo-awards {
+      flex-direction: column; /* Stack awards vertically on small screens */
+    }
+  }
+
+  /* Request demo page */
+  @media (max-width: 768px) {
+    .demo-request-form .form-group input,
+    .demo-request-form .form-group select,
+    .demo-request-form .form-group textarea {
+      width: 100%; /* Make form elements take full width on smaller screens */
+    }
+  }
+  
+  
+  /* You may need media queries to adjust the layout on smaller screens */
+  @media (max-width: 768px) {
+    .demo-request-content h1 {
+      font-size: 2em; /* Smaller font size on mobile */
+    }
+  
+    .demo-request-content p {
+      font-size: 0.9em; /* Smaller font size on mobile */
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* Ensure the full menu is not displayed and only the hamburger is visible */
+    .top-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    
+
+/* Hide the navigation list by default in mobile view */
+.nav-list {
+    display: none;
+}
+
+/* Hamburger menu icon styles */
+.hamburger-menu {
+    display: block; /* Show the hamburger icon */
+    cursor: pointer;
+}
+
+/* When .show class is added to .nav-list, display it as a block */
+.nav-list.show {
+    display: block;
+}
+  }
+
+
+  /* thank you section */ 
+@media only screen and (max-width: 768px) {
+    /* Ensure the full menu is not displayed and only the hamburger is visible */
+    .top-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    
+
+/* Hide the navigation list by default in mobile view */
+.nav-list {
+    display: none;
+}
+
+/* Hamburger menu icon styles */
+.hamburger-menu {
+    display: block; /* Show the hamburger icon */
+    cursor: pointer;
+}
+
+/* When .show class is added to .nav-list, display it as a block */
+.nav-list.show {
+    display: block;
+}
+
+/* Hamburger bars */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
 }

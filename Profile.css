@@ -1,0 +1,171 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    font-family: 'Sulphur Point', sans-serif;
+
+
+  }
+  
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  
+
+
+
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px 50px; /* Remove padding at the top */
+    margin: 0 auto; /* No vertical margin */
+    max-width: 100%; /* Adjust to fit your design */
+    min-width: auto ;
+    width: 100%; /* Stretch across width */
+    background: rgba(0, 0, 0, 0.5); /* Check if this background is needed as it may appear as space */
+    position: absolute; /* Absolute position */
+    top: 0; /* Align to top of the header */
+    left: 0; /* Align to left of the header */
+    z-index: 10; /* Make sure it's on top of other content */
+  }
+  
+  
+  /* Rest of your styles */
+  
+  
+  
+  .logo-container .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .top-nav .nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .top-nav .nav-list li {
+    padding: 0 35px;
+  }
+  
+  
+  .top-nav .nav-list li a {
+    text-decoration: none;
+    color: #fffcfc;
+    font-size: 15px;
+  }
+  
+
+  /* Profile/User Section */
+  .user-profile {
+    text-align: center;
+    font-family: 'Sulphur Point', sans-serif;
+}
+  
+  .user-image img {
+    width: 130px; /* You can adjust this as needed */
+    height: 130px; /* You can adjust this as needed */
+    border-radius: 50%;
+    border: 2px solid #000000; /* Optional: Adds a white border around the image */
+  }
+
+
+  .user-detail {
+    position: relative;
+
+    background-color: white;
+    border-radius: 20px; /* Replace with your desired color */
+    padding: 5px 20px; /* Adjust padding to your preference */
+  }
+  
+
+
+  .status-section {
+    /* Your updated styles from the previous message */
+    position: absolute;
+    left: 50%;
+    top: 80%; /* This will place the top of .status-section at the bottom of .user-detail */
+    transform: translateX(-50%); /* Only shift horizontally */
+    width: auto;
+    height: auto;
+    font-family: 'Sulphur Point', sans-serif;
+
+
+    
+  }
+  .status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between status items */
+  }
+  
+  .status-icon {
+    margin-right: 8px; /* Space between the icon and text */
+    color: #555; /* Icon color, adjust as needed */
+    font-size: 1.5em; /* Icon size, adjust as needed */
+  }
+  
+  /* If you want to use pseudo-elements for icons, you might add something like this: */
+
+  
+  /* Additional styles to adjust text and other elements within the status-item */
+  .status-item p {
+    margin: 0; /* Reset margin for the paragraph if needed */
+    font-size: 1em; /* Adjust text size as needed */
+  }
+  
+
+  
+  
+
+  @media only screen and (max-width: 768px) {
+    /* Ensure the full menu is not displayed and only the hamburger is visible */
+    .top-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    
+
+/* Hide the navigation list by default in mobile view */
+.nav-list {
+    display: none;
+}
+
+/* Hamburger menu icon styles */
+.hamburger-menu {
+    display: block; /* Show the hamburger icon */
+    cursor: pointer;
+}
+
+/* When .show class is added to .nav-list, display it as a block */
+.nav-list.show {
+    display: block;
+}
+
+/* Hamburger bars */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+  }

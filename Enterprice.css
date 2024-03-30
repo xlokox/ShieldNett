@@ -1,0 +1,297 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  
+@media only screen and (max-width: 768px) {
+    /* Ensure the full menu is not displayed and only the hamburger is visible */
+    .top-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    
+
+/* Hide the navigation list by default in mobile view */
+.nav-list {
+    display: none;
+}
+
+/* Hamburger menu icon styles */
+.hamburger-menu {
+    display: block; /* Show the hamburger icon */
+    cursor: pointer;
+}
+
+/* When .show class is added to .nav-list, display it as a block */
+.nav-list.show {
+    display: block;
+}
+
+/* Hamburger bars */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+}
+  
+  /* Position the .top-bar at the very top */
+  /* Position the .top-bar at the very top with no padding at the top */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px 50px; /* Remove padding at the top */
+    margin: 0 auto; /* No vertical margin */
+    max-width: 100%; /* Adjust to fit your design */
+    min-width: auto ;
+    width: 100%; /* Stretch across width */
+    background: rgba(0, 0, 0, 0.5); /* Check if this background is needed as it may appear as space */
+    position: absolute; /* Absolute position */
+    top: 0; /* Align to top of the header */
+    left: 0; /* Align to left of the header */
+    z-index: 10; /* Make sure it's on top of other content */
+  }
+  
+  
+  /* EnterPrise Section */
+  
+  
+  
+  .logo-container .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .top-nav .nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .top-nav .nav-list li {
+    padding: 0 35px;
+  }
+  
+  
+  .top-nav .nav-list li a {
+    text-decoration: none;
+    color: #fffcfc;
+    font-size: 15px;
+  }
+  
+
+  .enterprise-section {
+    max-width: 600px; /* Maximum width of the section */
+    margin: 0 auto; /* Centers the section in the middle of the page */
+    padding: 20px; /* Padding inside the section */
+}
+
+.enterprise-section h1 {
+    font-size: 2em; /* Large font size for the main title */
+    color: #333; /* Dark text color for the title */
+    margin-bottom: 0.5em; /* Space below the title */
+}
+
+.enterprise-section p {
+    font-size: 1em; /* Standard font size for the paragraph */
+    color: #666; /* Light grey text color for the paragraph */
+    margin-bottom: 2em; /* Space below the paragraph before the image placeholder */
+}
+
+.enterprise-image-placeholder {
+    width: 100%; /* The placeholder should take the full width of its container */
+    padding-top: 56.25%; /* This creates an aspect ratio of 16:9 (100 / (16 / 9) = 56.25%) */
+    background-color: #f0f0f0; /* Light grey background for the placeholder */
+    margin-top: 1em; /* Space above the placeholder */
+    position: relative; /* Enables absolute positioning for children elements */
+}
+
+/* If you're using a class for the image within the placeholder, adjust it like this */
+.enterprise-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the placeholder */
+    height: 100%; /* Full height of the placeholder */
+    object-fit: cover; /* Cover the placeholder without losing aspect ratio */
+}
+
+  /* end of the EnterPrise Section */
+  .ent-section {
+    max-width: 600px; /* Limits the width of the section */
+    margin: 0 auto; /* Centers the section */
+    padding: 3em; /* Padding around the content */
+    background-color: #ffffff; /* Background color for the section */
+  }
+  
+  .ent-title {
+    font-size: 2em; /* Size of the title */
+    color: #000000; /* Color of the title */
+    margin-bottom: 1em; /* Space below the title */
+  }
+  
+  .ent-description {
+    font-size: 1em; /* Size of the description text */
+    color: #666666; /* Color of the description text */
+    margin-bottom: 1em; /* Space below the description */
+  }
+  
+  .ent-features {
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    margin-bottom: 1.5em; /* Space below the features list */
+  }
+  
+  .ent-feature-item {
+    display: flex; /* Layout the items in a row */
+    align-items: center; /* Center-align the icon and text */
+    font-size: 0.9em; /* Size of the feature text */
+    color: #333333; /* Color of the feature text */
+    margin-bottom: 0.5em; /* Space between feature items */
+  }
+  
+  .ent-feature-icon {
+    color: #FF0000; /* Color of the icon */
+    margin-right: 0.5em; /* Space between icon and text */
+  }
+  
+  .ent-image-placeholder {
+    width: 100%; /* Full width of the container */
+    height: 300px; /* Fixed height for the placeholder */
+    background-image: url('/photos/NetworkEnterprise.webp');
+    background-size: cover; /* Cover the entire area of the div */
+    background-position: center; /* Center the background image */
+    border: 1px solid #ccc; /* Placeholder border */
+  }
+  
+  /* enhance enterprise */
+  .enhanced-security-section {
+    display: block; /* Use block layout for the main container */
+    padding: 10px;
+    max-width: 800px; /* Max width of the section for better control */
+    margin: 0 auto; /* Center the section */
+    background-color: #f2ecec;
+  }
+  
+  .security-text-content h2 {
+    font-size: 2rem; /* Size of the h2 */
+    margin-bottom: 1rem; /* Space below the h2 */
+    color: #333; /* Text color */
+  }
+  
+  .security-text-content p {
+    font-size: 1rem; /* Paragraph text size */
+    color: #666; /* Paragraph text color */
+    margin-bottom: 2rem; /* Space below the paragraph */
+  }
+  
+  .security-statistics {
+    display: block; /* Change to block to stack items */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .security-stat {
+    font-size: 1.25rem; /* Size of the statistics headings */
+    margin-bottom: 0.5rem; /* Space below each stat heading */
+  }
+  
+  /* Optional: You might want to add a class or directly style the video icon placeholder if it's not an actual playable video but just an icon/image */
+
+  
+
+  /* testomonial-avatars */
+
+  .testimonial-section {
+    text-align: center;
+    margin: 20px;
+  }
+  .testimonial-container {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .testimonial {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Changed from margin-right to bottom for better layout */
+  }
+  
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer p, footer span {
+    margin: 0;
+    font-size: 0.8em;
+    color: #666;
+  }
+
+
+
+
+
+
+  /* Base footer styles */
+.sn-footer {
+    background-color: #0a0a0a; /* Dark background for footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  /* Text styling within the footer */
+  .sn-footer-text {
+    margin: 0; /* Remove margin to prevent extra space */
+    font-family: 'Sulphur Point', sans-serif; /* Assuming 'Sulphur Point' is a font you have included */
+  }
+  
+  /* Link styling within the footer */
+  .sn-footer-link {
+    color: #ffffff; /* Set the color for the link, if needed */
+    text-decoration: none; /* Option to remove underline from link */
+  }
+  
+  /* Link hover effect, if desired */
+  .sn-footer-link:hover {
+    text-decoration: underline; /* Re-add underline on hover, if desired */
+  }
+  
+  
+  

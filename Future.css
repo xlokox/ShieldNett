@@ -1,0 +1,255 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  
+  
+@media only screen and (max-width: 768px) {
+    /* Ensure the full menu is not displayed and only the hamburger is visible */
+    .top-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    
+
+/* Hide the navigation list by default in mobile view */
+.nav-list {
+    display: none;
+}
+
+/* Hamburger menu icon styles */
+.hamburger-menu {
+    display: block; /* Show the hamburger icon */
+    cursor: pointer;
+}
+
+/* When .show class is added to .nav-list, display it as a block */
+.nav-list.show {
+    display: block;
+}
+
+/* Hamburger bars */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+}
+  /* Position the .top-bar at the very top */
+  /* Position the .top-bar at the very top with no padding at the top */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px 50px; /* Remove padding at the top */
+    margin: 0 auto; /* No vertical margin */
+    max-width: 100%; /* Adjust to fit your design */
+    min-width: auto ;
+    width: 100%; /* Stretch across width */
+    background: rgba(0, 0, 0, 0.5); /* Check if this background is needed as it may appear as space */
+    position: absolute; /* Absolute position */
+    top: 0; /* Align to top of the header */
+    left: 0; /* Align to left of the header */
+    z-index: 10; /* Make sure it's on top of other content */
+  }
+  
+  
+  /* EnterPrise Section */
+  
+  
+  
+  .logo-container .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .top-nav .nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .top-nav .nav-list li {
+    padding: 0 35px;
+  }
+  
+  
+  .top-nav .nav-list li a {
+    text-decoration: none;
+    color: #fffcfc;
+    font-size: 15px;
+  }
+
+  /* Main Section */
+/* CSS */
+.future-page-container {
+    width: 100%;
+    /* Additional styling */
+  }
+  
+  .future-page-hero {
+    text-align: center;
+    padding: 50px 20px;
+    /* Additional styling */
+  }
+  
+  .future-page-title {
+    font-size: 2.5em; /* Example size */
+    color: #333; /* Example color */
+    /* Additional styling */
+  }
+  
+  .future-page-subtitle {
+    font-size: 2em;
+    margin-top: 20px;
+    /* Additional styling */
+  }
+  
+  .future-page-image-placeholder {
+    width: 100%; /* Or a specific size */
+    height: 500px; /* Or the height you want */
+    background-color: #ececec; /* Placeholder color */
+    margin-top: 30px;
+    /* Add a path to the image when ready or keep as a placeholder */
+    background-image: url('/photos/FutureSection.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 80px;
+  }
+
+  /* Enhanced Firewall Protection Section CSS */
+.enhanced-firewall-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8; /* Example background color */
+  }
+  
+  .enhanced-firewall-title {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+  }
+  
+  .enhanced-firewall-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .enhanced-feature {
+    width: 30%; /* Adjust width based on preference */
+    margin-bottom: 1em;
+  }
+  
+
+  
+  .feature-title {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+  }
+  
+  .feature-description {
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+  
+
+
+  
+  /* Add additional styles as needed */
+  
+  /* Safer Digital Future Section CSS */
+  .digital-future-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    /* Add media query for tablet viewports if needed */
+  }
+  
+  .digital-future-content {
+    flex: 1;
+    padding-right: 20px; /* Adjust the spacing between the text and the image */
+  }
+  
+  .digital-future-image-placeholder {
+    flex: 1;
+    max-width: 40%; /* Adjust to fit the size in your wireframe */
+    height: auto; /* This will maintain the aspect ratio of the image */
+  }
+  
+  .digital-future-image-placeholder img {
+    width: 100%;
+    height: auto; /* This will maintain the aspect ratio of the image */
+    display: block; /* Remove any default inline spacing */
+    border-radius: 20px;
+  }
+    /* Example media query for tablet adjustments */
+    @media (max-width: 768px) {
+        .digital-future-section {
+          flex-direction: column;
+        }
+      
+        .digital-future-image-placeholder {
+          max-width: 100%;
+          margin-top: 20px;
+        }
+      }
+  
+
+  
+  /* Add additional styles as needed */
+  
+  /* Additional styles for other elements */
+  .sn-footer {
+    background-color: #0a0a0a; /* Dark background for footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  /* Text styling within the footer */
+  .sn-footer-text {
+    margin: 0; /* Remove margin to prevent extra space */
+    font-family: 'Sulphur Point', sans-serif; /* Assuming 'Sulphur Point' is a font you have included */
+  }
+  
+  /* Link styling within the footer */
+  .sn-footer-link {
+    color: #ffffff; /* Set the color for the link, if needed */
+    text-decoration: none; /* Option to remove underline from link */
+  }
+  
+  /* Link hover effect, if desired */
+  .sn-footer-link:hover {
+    text-decoration: underline; /* Re-add underline on hover, if desired */
+  }
+  
+  
+  

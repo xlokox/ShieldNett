@@ -1,12 +1,30 @@
 
-@import url("/mobile.css");
 @import url("/gridAbout.css");
-
+@import url("/demo.css");
+@import url("/servicesindex.css");
 @import url("/tablet.css");
-@import url("/vars.css");
 @import url("/grid.css");
-@import url("/gridMain.css");
 @import url("/LogInindex.css");
+@import url("/Thankyou.css");
+@import url("/Profile.css");
+@import url("/Enterprice.html");
+@import url("/Data.css");
+@import url("/Future.css");
+@import url("/script.js");
+@import url("/mobile.css");
+@import url('/vars.css'); /* Import the variables from the separate file */
+
+
+
+
+
+
+
+
+
+
+
+
 /* Basic reset for styling */
 /* Add your previous styles here... */
 

@@ -1,0 +1,611 @@
+
+  
+  .hero-header-services{
+    min-height: 100vh;
+    background-image: url('/photos/DALL·E\ 2024-03-23\ 13.37.50\ -\ Design\ an\ image\ that\ centers\ around\ a\ single\ ShieldNet\ logo\,\ which\ includes\ a\ shield\ and\ a\ red\ heart\,\ to\ represent\ the\ company\'s\ services.\ The\ logo\ sh.webp');
+    background-size: cover; 
+    background-position: center; /* Center the background */
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;      
+        margin-top: -30px; /* Adjust this value if there is a gap due to the .top-bar */
+        padding-top: 20px; /* Compensate for negative margin if needed */
+        background-attachment: fixed; /* Optional: Keeps the background fixed during scroll */
+      
+  }
+ 
+
+
+
+  /* Main Section */
+  .services-ai-firewall-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    border: 3px solid #ddd; /* Borderline */
+
+  }
+  
+  .services-content {
+    width: 60%; /* Adjust the width as necessary */
+    
+  }
+  
+  .services-title {
+    color: #000;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+
+  }
+  .services-content h2 { /* Assuming this is your heading */
+    font-size: 35px; /* Or any size you want */
+    /* Rest of your styles */
+    
+  }
+  .services-content h3 { /* Assuming this is your heading */
+    font-size: 25px; /* Or any size you want */
+    /* Rest of your styles */
+  }
+  
+  .services-content p { /* Assuming this is your paragraph */
+    font-size: 15px; /* Or any size you want */
+    /* Rest of your styles */
+  }
+  
+  
+  .services-description {
+    color: #555;
+    margin-bottom: 2rem;
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+  .services-features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+  .services-feature-item {
+    background-color: #fff; /* White background for a clean look */
+    border: 1px solid #e1e1e1; /* Light border for some definition */
+    border-radius: 4px; /* Slightly rounded corners for a softer look */
+    padding: 20px; /* Padding for spacing inside the items */
+    margin-bottom: 20px; /* Margin at the bottom of each item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow to lift the items off the page */
+    text-align: left; /* Align the text to the left for a classic testimonial look */
+  }
+  
+  .services-feature-icon {
+    /* Assuming this is an image or an icon font */
+    display: block; /* Block display to ensure it takes up the full width */
+    margin: 0 auto 20px; /* Center the icon and add margin below */
+    font-size: 24px; /* Increase the font size if it's an icon font */
+    /* If it's an image, you might want to control the size directly with width and height */
+  }
+  
+  .services-feature-title {
+    font-size: 1.25em; /* A larger font size for the title to stand out */
+    margin-bottom: 10px; /* A small margin below the title */
+    font-weight: bold; /* Bold font weight for the title */
+  }
+  
+  .services-feature-desc {
+    font-size: 1em; /* Standard font size for the description */
+    color: #666; /* A darker color for the description text */
+    line-height: 1.5; /* Increased line height for better readability */
+  }
+  
+  .services-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .services-btn-learn-more,
+  .services-btn-sign-up {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .services-btn-learn-more:hover,
+  .services-btn-sign-up:hover {
+    background-color: #0056b3;
+  }
+  
+  .services-image-placeholder {
+    width: 40%; /* Adjust the width as necessary */
+    height: 350px; /* Adjust the height as necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    /* This will ensure that if the image is larger than the placeholder, it will not spill out */
+  }
+  
+  .services-image-placeholder img {
+    width: 90%; /* This will make the image responsive to the placeholder's width */
+    height: 85%; /* This will make the image stretch to the placeholder's height. Might distort the image if the aspect ratio is not the same. */
+    object-fit: cover; /* This will cover the area of the placeholder without stretching the image */
+  }
+  
+  /* Add your image inside the .services-image-placeholder with a background property or <img> tag */
+
+/* comperhensive section */
+.comprehensive-section {
+    max-width: 850px; /* or whatever max width you prefer */
+    margin: 0 auto; /* This centers the section */
+    padding: 40px; /* Add some padding */
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  .section-subtitle {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    color: #666; /* or your preferred color */
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  .comprehensive-section .section-title {
+    font-size: 3.5em 
+}
+  
+  .comprehensive-section .section-subtitle {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+        font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+  .comprehensive-section .section-description {
+    font-size: 1.5em;
+    text-align: justify; /* Justify the text as seen in the image */
+    margin-bottom: 1.5em;
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+  .service-box {
+    display: flex;
+    justify-content: space-around; /* Space between the service items */
+    padding-bottom: 120px; /* Space at the bottom inside the border */
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+  .service-item {
+    text-align: center;
+    width: 30%; /* Approximate width for each service item */
+  }
+  
+
+  .service-item p {
+    font-size: 0.8em;
+    color: #555; /* Darker text for description */
+  }
+  
+
+
+/* comperhensive section */
+
+
+
+  /* Mobile Section */
+
+  .mobile-end-device-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .mobile-end-device-content {
+    flex-basis: 50%; /* Use flex-basis for flexible sizing */
+  }
+  
+  .mobile-end-device-title {
+    font-size: 55px;
+    margin-bottom: 1em;
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+  .mobile-end-device-description {
+    font-size: 21px;
+    margin-bottom: 1em;
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+
+  
+  .mobile-end-device-image-placeholder {
+    flex-basis: 44.5%; /* Adjust accordingly */
+    height: 550px; /* Your desired height */
+    background-color: #f0f0f0; /* Placeholder color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc; /* Add border if necessary */
+  }
+  
+  .mobile-end-device-image-placeholder img {
+    max-width: 100%;
+    height: auto;
+  }
+  .mobile-end-device-image-placeholder {
+    background-image: url('/photos/application.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+  }
+        /* support Section */
+        .support-section {
+            background-image: url('/photos/supportsection.webp');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 250px 0; /* Adjust the padding to ensure the content is vertically centered */
+          }
+          
+          .support-content h1 {
+            font-size: 2.5em; /* Adjust font size as needed */
+            margin-bottom: 0.5em;
+            font-family: 'Sulphur Point', sans-serif;
+
+          }
+          
+          .support-content-title {
+            background-color: rgba(14, 7, 7, 0.5); /* Adjust background color and opacity as needed */
+            padding: 10px; /* Adjust the padding to fit your design */
+          }
+          
+          .support-content-subtitle {
+            padding: 5px; /* Adjust the padding to fit your design */
+           font-family: 'Sulphur Point', sans-serif;
+
+          }
+          .support-content p {
+            font-size: 1.2em; /* Adjust font size as needed */
+            font-family: 'Sulphur Point', sans-serif;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity as needed */
+            padding: 5px; /* Adjust the padding to fit your design */
+            
+
+
+          }
+          .support-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6a45ff; /* Adjust button color as needed */
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            font-family: 'Sulphur Point', sans-serif;
+
+          }
+          .support-button:hover {
+            background-color: #5838ff; /* Darker shade for hover effect */
+          }
+      /* support Section */
+
+  /* Add your image inside the .mobile-end-device-image-placeholder with a background property or <img> tag */
+    /* Get A Demo Section */
+    .value-platform-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the content */
+        padding: 100px 0;
+      }
+      
+      .value-platform-content {
+        text-align: center; /* Center the text */
+      }
+      
+      .value-platform-content h2 {
+        font-size: 3.5em;
+        margin-bottom: 0.25em; /* Adjusted for closer spacing */
+        font-family: 'Sulphur Point', sans-serif;
+
+      }
+      
+      .value-platform-content p {
+        font-size: 2em;
+        margin-bottom: 1em;
+        font-family: 'Sulphur Point', sans-serif;
+
+      }
+      
+      .value-platform-demo-link {
+        display: block; /* Make the link a block to control the width */
+        width: fit-content; /* Fit the width as per content */
+        margin: 0 auto; /* Center the link */
+        font-weight: bold;
+        color: #0000EE; /* Change as needed */
+        text-decoration: none;
+        position: relative; /* Relative positioning for pseudo-element */
+        padding-bottom: 10px; /* Space for the line */
+        font-family: 'Sulphur Point', sans-serif;
+
+      }
+      
+      .value-platform-demo-link::after {
+        content: '';
+        display: block;
+        width: 100%; /* Full width of the content */
+        height: 2px; /* Height of the line */
+        background-color: #000; /* Color of the line */
+        position: absolute;
+        left: 0;
+        bottom: 0; /* Position at the bottom of the link */
+        font-family: 'Sulphur Point', sans-serif;
+
+      }
+      
+      .value-platform-stats {
+        display: flex;
+        justify-content: space-around;
+        width: 100%; /* Adjust as necessary for your layout */
+        padding-top: 20px; /* Space from the demo link */
+        font-family: 'Sulphur Point', sans-serif;
+
+      }
+      
+      .stat-item {
+        text-align: center;
+      }
+      
+      .stat-percentage {
+        font-size: 3.5em;
+        font-weight: bold;
+        color: #000;
+        margin: 1em 0;
+        font-family: 'Sulphur Point', sans-serif;
+
+      }
+      
+      .stat-description {
+        font-size: 1em;
+        margin-top: 1em;
+      }
+      
+        /* Get A Demo Section */
+
+        .email-services-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f5f5; /* Replace with your preferred background color */
+          }
+          
+          .email-services-content {
+            width: 60%;
+            padding: 20px;
+          }
+          
+          .email-services-title {
+            font-size: 24px;
+            color: #333; /* Dark text for better readability on light background */
+            margin-bottom: 10px; /* Space between title and description */
+            font-weight: bold; /* Bold font weight for titles */
+            font-family: 'Sulphur Point', sans-serif;
+
+          }
+          
+          .email-services-description {
+            font-size: 16px;
+            color: #666; /* Slightly lighter text for the description */
+            margin-bottom: 20px; /* Space between paragraphs */
+            line-height: 1.6; /* Line height for better readability */
+            font-family: 'Sulphur Point', sans-serif;
+
+          }
+
+
+
+/* Pricing Section*/ 
+.pricing-options {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .pricing-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    
+  }
+  
+  
+  .plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the space between the plans */
+  }
+  
+  .plan {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    background-color: #fff; /* White background for the plans */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+  }
+  
+  .plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .plan-title {
+    font-size: 1.5rem;
+    color: #007bff; /* Theme color for titles */
+    margin-bottom: 25px;
+    
+  }
+  
+  .price {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 15px 0;
+  }
+  
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  
+  .plan-features li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+  }
+  
+  .verified-icon {
+    color: #28a745; /* Bootstrap success color for the checkmark */
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+  .plan-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px; /* Increase padding for better touch targets on mobile */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase; /* A stylistic choice for buttons */
+    letter-spacing: 0.05rem; /* Spacing out letters for better readability */
+    width: 100%; /* Full width button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text inside the button */
+    display: block; /* Block level for full width */
+    margin: 10px 0; /* Add some margin to the top and bottom */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transitions for interaction */
+  }
+  
+  .plan-btn:hover, .plan-btn:focus {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* A slight move up to indicate interactivity */
+  }
+  
+  /* Styles for when no unique styles are needed for the 'Get started' buttons of each plan */
+  .get-started-basic,
+  .get-started-advanced {
+    font-size: 1rem; /* Adjust as needed */
+  }
+  
+  
+
+
+
+          
+  .email-services-image-placeholder {
+    /* Make the div responsive to the size of its container */
+    width: 100%;
+    max-width: 400px; /* or any maximum size you prefer */
+    margin: auto; /* this will center the div if it's smaller than its container */
+    overflow: hidden; /* ensures nothing spills out of the div */
+}
+          
+.email-services-image-placeholder img {
+  width: 100%; /* make the image responsive */
+  height: auto; /* maintain aspect ratio */
+  display: block; /* prevent default image inline behavior */
+  /* if you need to restrict the height of the image, you can also use max-height */
+}
+          
+          .contact-section {
+            display: flex;
+            justify-content: space-between; /* Space between the text and image */
+            align-items: center; /* Vertical alignment */
+            padding: 40px;
+            max-width: 1000px; /* Adjust based on your layout width */
+            margin: auto; /* Centering the container */
+            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+          
+          }
+          
+          .contact-details {
+            width: 50%; /* Allocate width to the text section */
+            padding-right: 20px; /* Space between the text and the image */
+          }
+          
+          .contact-image {
+            width: 50%; /* Allocate width to the image section */
+            text-align: center; /* Center the image if smaller than the allocated width */
+          }
+          
+          .contact-header {
+            font-size: 2.5rem; /* Adjust the font size of the header */
+            margin-bottom: 0.5rem; /* Reduce space below the header */
+            color: #333; /* Dark color for the header for better contrast */
+          }
+          
+          .contact-text {
+            font-size: 1rem; /* Standard font size for contact details */
+            color: #555; /* Dark grey color for contact text */
+            line-height: 1.5; /* Space between lines */
+            font-family: 'Sulphur Point', sans-serif;
+          
+          }
+          
+          .contact-details a {
+            color: #007bff; /* Link color */
+            text-decoration: none; /* Remove underline from links */
+          }
+          
+          .contact-details a:hover {
+            text-decoration: underline; /* Add underline on hover for links */
+          }
+          
+          /* Image styles */
+          .contact-image img {
+            max-width: 100%; /* Make image responsive */
+            height: auto; /* Maintain aspect ratio */
+          }
+          
+          
+          
+          
+          
+          
+          
+          /* Footer CSS */
+          footer {
+            background-color: #0a0a0a; /* Example background color */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%; /* Footer should take full width */
+          }
+          
+          /* Ensure no other styles are interfering with footer positioning */
+          footer p {
+            margin: 0; /* Remove margin to prevent unnecessary spacing */
+          }
+          

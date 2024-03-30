@@ -1,5 +1,147 @@
-/* Tablet styles */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
+/* Base styles for tablet */
+.container {
+  width: 80%;
+  margin: auto; /* Center the container */
+}
 
+.button {
+  padding: 12px 24px; /* Size appropriate for tablet */
+  display: block;
+  margin: 10px auto; /* Center the button */
+}
+
+
+/* Mobile screens */
+@media (max-width: 599px) { /* Maximum tablet size - 1px */
+  .container {
+    width: 100%; /* Full width on smaller screens */
+    padding: 0 15px; /* Padding instead of margin for screen edge spacing */
+  }
+
+  .button {
+    padding: 10px 20px; /* Smaller padding on mobile */
+  }
+
+  /* Additional mobile-specific styles */
+}
+@media (max-width: 768px) {
+  .input-group input,
+  .input-group select {
+    width: 100%; /* Full width on mobile */
+    margin-right: 0;
+  }
+}
+
+  @media (max-width: 768px) {
+    .digital-future-section {
+      flex-direction: column;
+    }
+  
+    .digital-future-image-placeholder {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  /* mobile Section */
+/* Styles for tablet devices */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .mobile-end-device-section,
+  .support-section {
+    grid-template-columns: 1fr 1fr; /* Keep two columns for tablets */
+  }
+
+  .mobile-end-device-image-placeholder img,
+  .support-content .support-button {
+    max-width: 100%; /* Ensure images and buttons are fully visible */
+    height: auto; /* Maintain aspect ratio */
+    order: 1; /* Image and button will come first on larger screens */
+  }
+
+  .mobile-end-device-content,
+  .support-content {
+    order: 0; /* Text content will come first on tablet */
+    text-align: left; /* Align text to the left */
   }
   
+  .support-button {
+    padding: 10px 20px; /* Make the button larger for easier touch */
+    font-size: 1.2em; /* Increase the font size for better readability */
+    margin-top: 20px; /* Add some space above the button */
+  }
+}
+
+/* Ensure the image placeholder displays an image */
+.mobile-end-device-image-placeholder {
+  background: url('/photos/application.webp') no-repeat center center; /* Replace with your image path */
+  background-size: cover; /* Cover the entire area of the div */
+}
+
+/* Ensure the support button stands out */
+.support-button {
+  background-color: #007bff; /* Use your primary color */
+  color: white; /* Use a color that stands out */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners for the button */
+}
+
+
+/* Tablet CSS comprenshive section */
+/* Mobile CSS */
+/* Tablet CSS */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .service-item {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(50% - 10px); /* Assuming a 20px gap */
+    margin-right: 10px;
+  }
+
+  .service-title {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+  }
+
+  .service-description {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  /* To ensure only two cards per row on tablet */
+  .service-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+
+/* Email image Section */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .email-services-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align the items */
+  }
+
+  .email-services-image-placeholder {
+    order: 2; /* Image will move to the bottom */
+    width: 100%; /* Full width, or adjust as necessary */
+    margin-top: 20px; /* Space above the image */
+  }
+
+  .email-services-image-placeholder img {
+    max-width: 100%; /* Responsive image size */
+    height: auto;
+  }
+}
+
+
+/* Email image Section */
+

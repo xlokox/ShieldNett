@@ -1,147 +1,245 @@
 
+  
+.hero-header-about {
+  min-height: 100vh; /* Minimum height to fill the viewport height */
+  background-image: url('/photos/AboutUsSection.webp'); /* Path to your image */
+  background-size: cover; 
+  background-position: center; /* Center the background */
+  display:grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;      
+      margin-top: -30px; /* Adjust this value if there is a gap due to the .top-bar */
+      padding-top: 20px; /* Compensate for negative margin if needed */
+      background-attachment: fixed; /* Optional: Keeps the background fixed during scroll */
+  
+}
+  
+  .about-section {
+  max-width: 800px; /* Adjust as needed for your design */
+  margin: 40px auto; /* Centers the section with top and bottom margin */
+  padding: 20px; /* Adds padding inside the section */
+  text-align: center; /* Aligns text to the center */
+}
+.about-title-about{
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
-  }
-  
-  
-  .hero-header {
-    min-height: 100vh;
-    background-image: url('/photos/AboutUsSection.webp');
-    background-size: cover; 
-    background-position: center; /* Center the background */
-    background-repeat: no-repeat;
-    display:grid;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  
-  /* Position the .top-bar at the very top */
-  /* Position the .top-bar at the very top with no padding at the top */
-  .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Align items to the start */
-    padding: 20px 50px; /* Remove padding at the top */
-    margin: 0 auto; /* No vertical margin */
-    max-width: 1440px; /* Adjust to fit your design */
-    width: 100%; /* Stretch across width */
-    background: rgba(0, 0, 0, 0.5); /* Check if this background is needed as it may appear as space */
-    position: absolute; /* Absolute position */
-    top: 0; /* Align to top of the header */
-    left: 0; /* Align to left of the header */
-    z-index: 10; /* Make sure it's on top of other content */
-  }
-  
-  
-  /* Rest of your styles */
-  
-  
-  
-  .logo-container .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .top-nav .nav-list {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .top-nav .nav-list li {
-    padding: 0 35px;
-  }
-  
-  
-  .top-nav .nav-list li a {
-    text-decoration: none;
-    color: #fffcfc;
-    font-size: 15px;
-  }
-  
+  color: #000000; /* Black color for the title */
+  font-size: 1em; /* Large font size for the title */
+  font-family: 'Sulphur Point', sans-serif;
+}
+.about-title {
+  color: #000; /* Black color for the title */
+  font-size: 2.5em; /* Large font size for the title */
+  font-family: 'Sulphur Point', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 0.5em; /* Space below the title */
+  font-weight: bold; /* Bold font weight for the title */
+}
+
+
 
   
+
+
+/* Main Section Starts Here */
+.main-section {
+  display: flex;
+  flex-direction: column-reverse; /* Image first, content second for mobile */
+  align-items: center; /* Center-align the content */
+  padding: 20px; /* Add some padding */
+}
+
+
+.main-section-content {
+  text-align: center; /* Center the text content */
+  padding: 20px; /* Add some padding around the text */
+}
+
+.main-section h1 {
+  color: #000;
+  font-size: 2.5rem; /* Adjust the size as needed */
+  margin-bottom: 1rem;
+}
+
+.main-section p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.image-placeholder img {
+  width: 80%; /* Take up 80% of the container width */
+  max-width: 400px; /* Max width to not be too big */
+  height: auto; /* Keep the aspect ratio */
+  margin-top: 20px; /* Add space above the image */
+}
+.image-placeholder {
+  width: 100%; /* Full width */
+  text-align: center; /* Center the image */
+}
+
+/* If you add an actual image, you can replace .image-placeholder with the class or ID of your image container */
+.testimonial-container {
+  background-color: #f4f4f4; /* Adjust the background color as needed */
+  padding: 40px;
+  border-radius: 8px; /* Rounded corners for the container */
+  max-width: 1000px; /* Adjust the width as needed */
+  margin: 40px auto; /* Centering the container */
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #333; /* Text color */
+  margin-bottom: 15px; /* Spacing between text and author details */
+}
+
+.testimonial-rating {
+  display: flex;
+  justify-content: center; /* Center the stars */
+  margin-bottom: 10px; /* Spacing between stars and testimonial text */
+}
+
+.testimonial-star {
+  color: #fcd34d; /* Star color */
+  margin-right: 5px; /* Spacing between stars */
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: #333; /* Author name color */
+}
+
+.testimonial-title {
+  font-size: 0.85rem;
+  color: #555; /* Author title color */
+}
+
+.testimonial-logo {
+  display: inline-block; /* Logo or company icon next to the author's title */
+  background: url('/path/to/logo.png') no-repeat center center; /* Path to the company's logo */
+  width: 24px; /* Adjust as needed */
+  height: 24px; /* Adjust as needed */
+  margin-left: 5px; /* Spacing between author title and logo */
+}
+.team-section {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Sulphur Point', sans-serif;
+
+  background-color: #f8f8f8; /* Change this color to match your site's design */
+}
+
+.team-section h2 {
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333; /* Or any color you prefer */
+
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.team-member {
+  flex-basis: calc(25% - 20px);
+  text-align: center;
+  padding: 20px;
+  background-color: white; /* or any color you want for the card background */
+  border: 1px solid #ddd; /* Change color as needed */
+  border-radius: 10px; /* rounded corners */
+      font-family: 'Sulphur Point', sans-serif;
+
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Creates a round image. Adjust as needed */
+  border: 3px solid #ddd; /* Optional border for images */
+  margin-bottom: 20px;
+}
+
+.team-member h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: 'Sulphur Point', sans-serif;
+
+  font-size: 1.2rem;
+  color: #333; /* Adjust the color as needed */
+}
+
+
+.team-member p {
+  margin-top: 0;
+  font-family: 'Sulphur Point', sans-serif;
+
+  color: #666;
+}
+.contact-section {
+  display: flex;
+  justify-content: space-between; /* Space between the text and image */
+  align-items: center; /* Vertical alignment */
+  padding: 40px;
+  max-width: 1100px; /* Adjust based on your layout width */
+  margin: auto; /* Centering the container */
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  font-family: 'Sulphur Point', sans-serif;
   
-  .hero-content h1 {
-      font-size: 4vw; /* Responsive font size based on the width of the viewport */
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
-      line-height: 1.2; /* Adjust line height for better readability */
-      margin: 0; /* Reset margin */
-      padding: 0 2vw; /* Padding on the sides */
-      color: #000000; /* White color for the text */
+
+}
+
+.contact-details {
+  width: 50%; /* Allocate width to the text section */
+  padding-right: 20px; /* Space between the text and the image */
+}
+
+.contact-image {
+  width: 50%; /* Allocate width to the image section */
+  text-align: center; /* Center the image if smaller than the allocated width */
   
-  }
-  
-  .hero-content p {
-    font-size: 1.5vw;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    line-height: 1.4;
-    margin: 10px 0; /* Space above and below paragraph */
-    padding: 0 2vw;
-    color: #000000; /* White color for the text */
-  }
-  
-  .hero-buttons .btn {
-    padding: 10px 30px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 1px;
-    cursor: pointer;
+}
+
+.contact-header {
+  font-size: 2.5rem; /* Adjust the font size of the header */
+  margin-bottom: 0.5rem; /* Reduce space below the header */
+  color: #333; /* Dark color for the header for better contrast */
+}
+
+.contact-text {
+  font-size: 1rem; /* Standard font size for contact details */
+  color: #555; /* Dark grey color for contact text */
+  line-height: 1.5; /* Space between lines */
+  font-family: 'Sulphur Point', sans-serif;
+
+}
+
+.contact-details a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.contact-details a:hover {
+  text-decoration: underline; /* Add underline on hover for links */
+}
+
+
+
+/* Handling responsiveness */
+@media (max-width: 768px) {
+  .contact-details,
+  .contact-image {
+    width: 100%; /* Full width on smaller screens */
   }
 
-  
- 
-  /* Add the rest of your CSS styles here */
-  
-  
-  
-  
-  
-  /* The rest of your CSS goes here */
-  
-  /* Ensure the text stands out over the image */
-  .hero-content h1,
-  .hero-content p {
-    display: inline-block;
-    background-color:black(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-    padding: 20px;
-    border-radius: 5px;
+  .contact-section {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
   }
-  
-  .hero-buttons {
-    margin-top: 30px;
-  }
-  
-  /* The rest of your CSS for buttons and other elements */
-  .sulphur-point-light {
-    font-family: 'Sulphur Point', sans-serif;
-    font-weight: 300;
-  }
-  
-  .sulphur-point-regular {
-    font-family: 'Sulphur Point', sans-serif;
-    font-weight: 400;
-  }
-  
-  .sulphur-point-bold {
-    font-family: 'Sulphur Point', sans-serif;
-    font-weight: 700;
-  }
+}
+
+
+/* Responsive layout adjustments */
+
+

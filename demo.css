@@ -1,0 +1,197 @@
+
+.demo-request {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: white;
+    background: linear-gradient(135deg, #432dd6, #432dd6); /* Adjust the gradient to match your image */
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden; /* Ensure nothing spills outside the border-radius */
+    margin-top: 43px;
+  }
+  
+  .demo-request::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/path-to-your/background-image.jpg'); /* Add your background image path */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7; /* Adjust for desired transparency level */
+    z-index: -1; /* Position beneath content */
+  }
+  
+  .demo-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .demo-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .demo-features {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin-bottom: 2rem; /* Space below the list */
+  }
+  
+  .demo-features li {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for list items */
+    margin-bottom: 1rem; /* Space between list items */
+    padding: 0.5rem; /* Padding inside list items */
+    border-radius: 4px; /* Rounded corners for list items */
+    color: white; /* White text color */
+  }
+  .demo-features li {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for list items */
+    margin-bottom: 1rem; /* Space between list items */
+    padding: 0.5rem; /* Padding inside list items */
+    border-radius: 4px; /* Rounded corners for list items */
+    color: white; /* White text color */
+  }
+  
+  .demo-awards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .award {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+  
+
+  .demo-request-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: white;
+    background: #432dd6; /* Same background color as Request Demo */
+    text-align: left;
+    border-radius: 8px;
+  }
+  
+  .demo-request-form .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .demo-request-form .form-group input,
+  .demo-request-form .form-group select,
+  .demo-request-form .form-group textarea {
+    width: 48%; /* Make form elements take up half width */
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  }
+  
+  .demo-request-form .form-group textarea {
+    height: 120px; /* Set a fixed height for textarea */
+    width: 100%; /* Make textarea take full width */
+    resize: vertical; /* Allow only vertical resizing */
+  }
+  
+  .demo-request-form .submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #432dd6;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.testimonial-demo:hover {
+    background-color: #432dd6; /* Darker shade of blue for hover */
+    cursor: pointer;
+    transform: scale(1.05); /* Scales the item a little */
+}
+  /* Additional responsive adjustments as needed */
+
+  .demo-vr-testimonial-section {
+    background-color: #432dd6;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .demo-vr-testimonial-section {
+    background-color: #432dd6; /* or the specific purple you are using */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .demo-vr-testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .demo-vr-testimonial-card {
+    background: transparent; /* Make the card background transparent */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    border: 1px solid white; /* Add border if needed */
+  }
+  
+  .demo-vr-testimonial-logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .demo-vr-testimonial-card p {
+    color: white; /* Change the text color to white or any color that will show on purple */
+    font-size: 0.9rem;
+  }
+  
+  
+  /* Ensure other necessary CSS is updated to match these new class names */
+  /* main.css */
+/* demo-vr.css */
+
+.demo-vr-testimonial-section {
+  background-color: var(--primary-bg-color);
+  padding: 20px;
+  text-align: center;
+  /* Other styles */
+}
+
+.demo-vr-testimonial-card {
+  background: transparent;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: var(--card-shadow);
+  max-width: 300px;
+  transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+  /* Other styles */
+}
+
+.demo-vr-testimonial-card:hover {
+  transform: translateY(-10px);
+  background-color: var(--hover-bg-color);
+  cursor: pointer;
+  /* Other styles */
+}
+
+.demo-vr-testimonial-card p {
+  color: var(--text-color);
+  /* Other styles */
+}
+
