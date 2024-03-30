@@ -37,7 +37,17 @@
 }
 
 }
+@media (max-width: 767px) {
+  .hero-header {
+    min-height: 60vh; /* You can adjust this value to fit mobile screens */
+    background-image: url('/photos/HeroSectionMobile.webp'); /* Optional: Different image for mobile */
+    margin-top: 0; /* Reset any negative margin */
+    padding-top: 10px; /* Reduced padding */
+    background-attachment: scroll; /* Fixed backgrounds can be problematic on mobile */
+  }
 
+  /* Rest of your mobile-specific styles */
+}
 
 /* Service Section */
 @media only screen and (max-width: 768px) {
