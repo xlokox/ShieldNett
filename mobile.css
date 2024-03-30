@@ -35,18 +35,79 @@
     background-color: #fff;
     transition: all 0.3s ease;
 }
+@media (max-width: 767px) {
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* Adjust padding and other styles as needed */
+    padding: 0 15px; /* Example: Add padding to left and right */
+  }
+  .logo-container .logo {
+    font-size: 20px; /* Smaller font size for mobile */
+    /* Adjust margins or padding as needed */
+  }
+
+  .top-nav .nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; /* To distribute items evenly */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+}
+
+/* bar menu to fix */
 
 }
 @media (max-width: 767px) {
   .hero-header {
     min-height: 60vh; /* You can adjust this value to fit mobile screens */
     background-image: url('/photos/HeroSection.webp'); /* Optional: Different image for mobile */
-    margin-top: 0; /* Reset any negative margin */
+    padding-top: 5px; /* Reduced padding */
+    background-attachment: scroll; /* Fixed backgrounds can be problematic on mobile */
+  }
+}
+@media (max-width: 767px) {
+  .hero-header-about {
+    min-height: 60vh; /* You can adjust this value to fit mobile screens */
+    background-image: url('/photos/AboutUsSection.webp'); /* Optional: Different image for mobile */
     padding-top: 10px; /* Reduced padding */
     background-attachment: scroll; /* Fixed backgrounds can be problematic on mobile */
   }
 }
 
+@media (max-width: 767px) {
+  .hero-header-services {
+    min-height: 60vh; /* You can adjust this value to fit mobile screens */
+    background-image: url('/photos/DALL·E\ 2024-03-23\ 13.37.50\ -\ Design\ an\ image\ that\ centers\ around\ a\ single\ ShieldNet\ logo\,\ which\ includes\ a\ shield\ and\ a\ red\ heart\,\ to\ represent\ the\ company\'s\ services.\ The\ logo\ sh.webp'); /* Optional: Different image for mobile */
+    padding-top: 10px; /* Reduced padding */
+    background-attachment: scroll; /* Fixed backgrounds can be problematic on mobile */
+  }
+}
+
+
+@media (max-width: 767px) {
+  .hero-header::after {
+    /* If you had a blur here, disable it for mobile */
+    filter: none;
+  }
+
+  .hero-content h1, .hero-content p {
+    /* Any other styles that should be applied or removed for mobile */
+    text-shadow: none; /* Example: Removing text shadow if it was there */
+  }
+
+  /* Any additional styles you want to reset or apply for mobile go here */
+}
+@media (min-width: 768px) {
+  .hero-header:hover::after {
+    /* Apply blur on hover */
+    filter: blur(10px); /* Adjust the value as needed */
+  }
+}
 /* Service Section */
 @media only screen and (max-width: 768px) {
     /* Adjust hero content styling */
