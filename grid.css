@@ -33,11 +33,6 @@ body {
     font-family: 'Sulphur Point', sans-serif;
     font-weight: 700;
   }
-  :root {
-    --transition-speed: 0.3s; /* Adjust the speed as needed */
-    --blur-amount: 5px; /* Adjust the blur amount as needed */
-  }
-  
 
   .hero-header {
     min-height: 100vh; /* Minimum height to fill the viewport height */
@@ -67,26 +62,9 @@ body {
     opacity: 0; /* Fully transparent by default */
     filter: blur(0); /* No blur by default */
   }
-  .hero-header:hover::after {
-    opacity: 1; /* Fully visible on hover */
-    filter: blur(var(--blur-amount)); /* Apply blur on hover */
-  }
-  
-  .hero-content {
-    filter: blur(4px); /* Adjust the blur amount as needed */
-    transition: filter 0.3s ease; /* Smooth transition for the blur effect */
-  }
-  
-  /* Remove blur on hover */
-  .hero-content:hover {
-    filter: blur(0);
-  }
-  
-  /* Class to control blur via JavaScript */
-  .blur-effect {
-    filter: blur(4px);
-  }
-  
+
+
+
 /* Position the .top-bar at the very top */
 /* Position the .top-bar at the very top with no padding at the top */
 .top-bar {
