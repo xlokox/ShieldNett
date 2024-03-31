@@ -63,49 +63,52 @@
 }
   /* Position the .top-bar at the very top */
   /* Position the .top-bar at the very top with no padding at the top */
+  /* Position the .top-bar at the very top */
   .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000; /* Add a background color to the nav bar for visibility */
+    color: white;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the start */
-    padding: 20px 50px; /* Remove padding at the top */
-    margin: 0 auto; /* No vertical margin */
-    max-width: 100%; /* Adjust to fit your design */
-    min-width: auto ;
-    width: 100%; /* Stretch across width */
-    background: rgba(0, 0, 0, 0.5); /* Check if this background is needed as it may appear as space */
-    position: absolute; /* Absolute position */
-    top: 0; /* Align to top of the header */
-    left: 0; /* Align to left of the header */
-    z-index: 10; /* Make sure it's on top of other content */
+    align-items: center;
+    padding: 2.5px 5px; /* Add some padding inside the nav bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
   }
   
   
-  /* EnterPrise Section */
-  
-  
-  
   .logo-container .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 30px; /* Adjust the size as needed */
+    color: white; /* Adjust color as needed */
+    text-decoration: none; /* Remove underline from links if necessary */
+    /* Additional styling for the logo */
   }
   
   .top-nav .nav-list {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: flex-end;
+    gap: 20px; /* Adjust the gap between the navigation items */
   }
   
-  .top-nav .nav-list li {
-    padding: 0 35px;
-  }
   
   
   .top-nav .nav-list li a {
-    text-decoration: none;
-    color: #fffcfc;
-    font-size: 15px;
+    color: white; /* Adjust link color as needed */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Adjust padding for clickable area */
+    /* Additional styling for links */
   }
-
+  
+  /* Navigation link hover effect */
+  .top-nav .nav-list li a:hover {
+    background-color: #333; /* Change background on hover */
+    border-radius: 4px; /* Optional: round corners on hover */
+  }
   /* Main Section */
 /* CSS */
 .future-page-container {

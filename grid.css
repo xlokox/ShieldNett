@@ -10,14 +10,12 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Sulphur Point', sans-serif;
-
-}
-/* Ensure any default margins and paddings are reset */
-body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scroll */
+
 }
+
 
   .sulphur-point-light {
     font-family: 'Sulphur Point', sans-serif;
@@ -67,28 +65,53 @@ body {
 
 /* Position the .top-bar at the very top */
 /* Position the .top-bar at the very top with no padding at the top */
-.top-bar {
-  position: fixed; /* Fixed at the top */
-  top: 0;
-  left: 0;
-  right: 0; /* Stretch across the full width */
-  z-index: 1; /* Ensure it's above the .hero-header-about section */
+  /* Position the .top-bar at the very top */
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000; /* Add a background color to the nav bar for visibility */
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Add some padding inside the nav bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
+  }
   
-}
-/* Rest of your styles */
-
-
-
-.logo-container .logo {
-  font-size: 30px;
-  color: white;
-}
-
-.top-nav .nav-list {
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-}
+  
+  .logo-container .logo {
+    font-size: 30px; /* Adjust the size as needed */
+    color: white; /* Adjust color as needed */
+    text-decoration: none; /* Remove underline from links if necessary */
+    /* Additional styling for the logo */
+  }
+  
+  .top-nav .nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Adjust the gap between the navigation items */
+  }
+  
+  
+  
+  .top-nav .nav-list li a {
+    color: white; /* Adjust link color as needed */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Adjust padding for clickable area */
+    /* Additional styling for links */
+  }
+  
+  /* Navigation link hover effect */
+  .top-nav .nav-list li a:hover {
+    background-color: #333; /* Change background on hover */
+    border-radius: 4px; /* Optional: round corners on hover */
+  }
+/* nav bar section */ 
 .hero-content h1 {
     font-size: 4vw; /* Responsive font size based on the width of the viewport */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */

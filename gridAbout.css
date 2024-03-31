@@ -113,13 +113,7 @@
   color: #555; /* Author title color */
 }
 
-.testimonial-logo {
-  display: inline-block; /* Logo or company icon next to the author's title */
-  background: url('/path/to/logo.png') no-repeat center center; /* Path to the company's logo */
-  width: 24px; /* Adjust as needed */
-  height: 24px; /* Adjust as needed */
-  margin-left: 5px; /* Spacing between author title and logo */
-}
+
 .team-section {
   text-align: center;
   padding: 20px;
