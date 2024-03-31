@@ -47,70 +47,72 @@ body {
         position: relative; /* Optional: Keeps the background fixed during scroll */
     
   }
-  .hero-header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent overlay */
-    z-index: -1; /* Behind the text */
-    transition: opacity var(--transition-speed) ease, filter var(--transition-speed) ease;
-    opacity: 0; /* Fully transparent by default */
-    filter: blur(0); /* No blur by default */
-  }
-
 
 
 /* Position the .top-bar at the very top */
 /* Position the .top-bar at the very top with no padding at the top */
   /* Position the .top-bar at the very top */
-  .top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #000; /* Add a background color to the nav bar for visibility */
-    color: white;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; /* Add some padding inside the nav bar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
-  }
-  
-  
-  .logo-container .logo {
-    font-size: 30px; /* Adjust the size as needed */
-    color: white; /* Adjust color as needed */
-    text-decoration: none; /* Remove underline from links if necessary */
-    /* Additional styling for the logo */
-  }
-  
-  .top-nav .nav-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px; /* Adjust the gap between the navigation items */
-  }
-  
-  
-  
-  .top-nav .nav-list li a {
-    color: white; /* Adjust link color as needed */
-    text-decoration: none; /* Remove underline from links */
-    padding: 5px 10px; /* Adjust padding for clickable area */
-    /* Additional styling for links */
-  }
-  
-  /* Navigation link hover effect */
-  .top-nav .nav-list li a:hover {
-    background-color: #333; /* Change background on hover */
-    border-radius: 4px; /* Optional: round corners on hover */
-  }
+/* Base styles */
+/* Base styles */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000; /* Add a background color to the nav bar for visibility */
+  color: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Add some padding inside the nav bar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
+}
+
+
+.logo-container .logo {
+  font-size: 30px; /* Adjust the size as needed */
+  color: white; /* Adjust color as needed */
+  text-decoration: none; /* Remove underline from links if necessary */
+  /* Additional styling for the logo */
+}
+
+.top-nav .nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px; /* Adjust the gap between the navigation items */
+}
+.hamburger-menu {
+  display: none; /* Hide hamburger by default */
+  width: auto;
+}
+
+
+.top-nav .nav-list li a {
+  color: white; /* Adjust link color as needed */
+  text-decoration: none; /* Remove underline from links */
+  padding: 5px 10px; /* Adjust padding for clickable area */
+  /* Additional styling for links */
+}
+
+
+/* Navigation link hover effect */
+.top-nav .nav-list li a:hover {
+  background-color: #333; /* Change background on hover */
+  border-radius: 4px; /* Optional: round corners on hover */
+}
+
+/* Hides the default checkbox visually */
+.menu-toggle {
+display: none;
+}
+
+/* Styles the label to look like a hamburger menu */
+/* Desktop styles */
+
+
 /* nav bar section */ 
 .hero-content h1 {
     font-size: 4vw; /* Responsive font size based on the width of the viewport */
@@ -611,3 +613,5 @@ footer {
 footer p {
   margin: 0; /* Remove margin to prevent unnecessary spacing */
 }
+
+

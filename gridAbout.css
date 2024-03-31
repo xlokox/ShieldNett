@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;      
-      margin-top: -30px; /* Adjust this value if there is a gap due to the .top-bar */
+      margin-top: -30px; /* Adjust this value if there is a gap due to the  */
       padding-top: 20px; /* Compensate for negative margin if needed */
       background-attachment: fixed; /* Optional: Keeps the background fixed during scroll */
   

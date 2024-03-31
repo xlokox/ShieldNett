@@ -1,67 +1,7 @@
 
-@media only screen and (max-width: 768px) {
-    /* Ensure the full menu is not displayed and only the hamburger is visible */
-    .top-nav {
-        display: none;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-    
-
-/* Hide the navigation list by default in mobile view */
-.nav-list {
-    display: none;
-}
-
-/* Hamburger menu icon styles */
-.hamburger-menu {
-    display: block; /* Show the hamburger icon */
-    cursor: pointer;
-}
-
-/* When .show class is added to .nav-list, display it as a block */
-.nav-list.show {
-    display: block;
-}
-
-/* Hamburger bars */
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-@media (max-width: 767px) {
-  .top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    /* Adjust padding and other styles as needed */
-    padding: 0 15px; /* Example: Add padding to left and right */
-  }
-  .logo-container .logo {
-    font-size: 20px; /* Smaller font size for mobile */
-    /* Adjust margins or padding as needed */
-  }
-
-  .top-nav .nav-list {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between; /* To distribute items evenly */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-  }
-}
-
 /* bar menu to fix */
 
-}
+
 @media (max-width: 767px) {
   .hero-header {
     min-height: 60vh; /* You can adjust this value to fit mobile screens */
@@ -89,17 +29,6 @@
   }
 }
 /* Mobile Styles */
-@media (max-width: 767px) {
-  .hero-header::after {
-    /* Disable the blur effect */
-    content: none;
-  }
-
-  .hero-content h1, .hero-content p {
-    /* Remove any text shadow or other effects that might cause blur */
-    text-shadow: none;
-  }
-}
 
 
 /* Service Section */
@@ -408,30 +337,3 @@
     }
   }
 
-  @media only screen and (max-width: 768px) {
-    /* Ensure the full menu is not displayed and only the hamburger is visible */
-    .top-nav {
-        display: none;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-    
-
-/* Hide the navigation list by default in mobile view */
-.nav-list {
-    display: none;
-}
-
-/* Hamburger menu icon styles */
-.hamburger-menu {
-    display: block; /* Show the hamburger icon */
-    cursor: pointer;
-}
-
-/* When .show class is added to .nav-list, display it as a block */
-.nav-list.show {
-    display: block;
-}
-  }

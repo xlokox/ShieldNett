@@ -1,15 +1,3 @@
-/* Base styles for tablet */
-.container {
-  width: 80%;
-  margin: auto; /* Center the container */
-}
-
-.button {
-  padding: 12px 24px; /* Size appropriate for tablet */
-  display: block;
-  margin: 10px auto; /* Center the button */
-}
-
 
 /* Mobile screens */
 @media (max-width: 599px) { /* Maximum tablet size - 1px */

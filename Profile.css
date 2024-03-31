@@ -24,52 +24,144 @@
   
   
 
-
-
   .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000; /* Add a background color to the nav bar for visibility */
+    color: white;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the start */
-    padding: 20px 50px; /* Remove padding at the top */
-    margin: 0 auto; /* No vertical margin */
-    max-width: 100%; /* Adjust to fit your design */
-    min-width: auto ;
-    width: 100%; /* Stretch across width */
-    background: rgba(0, 0, 0, 0.5); /* Check if this background is needed as it may appear as space */
-    position: absolute; /* Absolute position */
-    top: 0; /* Align to top of the header */
-    left: 0; /* Align to left of the header */
-    z-index: 10; /* Make sure it's on top of other content */
+    align-items: center;
+    padding: 10px 20px; /* Add some padding inside the nav bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
   }
   
   
-  /* Rest of your styles */
+  .logo-container .logo {
+    font-size: 30px; /* Adjust the size as needed */
+    color: white; /* Adjust color as needed */
+    text-decoration: none; /* Remove underline from links if necessary */
+    /* Additional styling for the logo */
+  }
   
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000; /* Add a background color to the nav bar for visibility */
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Add some padding inside the nav bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
+  }
   
   
   .logo-container .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 30px; /* Adjust the size as needed */
+    color: white; /* Adjust color as needed */
+    text-decoration: none; /* Remove underline from links if necessary */
+    /* Additional styling for the logo */
   }
   
   .top-nav .nav-list {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: flex-end;
+    gap: 20px; /* Adjust the gap between the navigation items */
   }
-  
-  .top-nav .nav-list li {
-    padding: 0 35px;
+  .hamburger-menu {
+    display: none; /* Hide hamburger by default */
+    width: auto;
   }
   
   
   .top-nav .nav-list li a {
-    text-decoration: none;
-    color: #fffcfc;
-    font-size: 15px;
+    color: white; /* Adjust link color as needed */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Adjust padding for clickable area */
+    /* Additional styling for links */
   }
   
-
+  
+  /* Navigation link hover effect */
+  .top-nav .nav-list li a:hover {
+    background-color: #333; /* Change background on hover */
+    border-radius: 4px; /* Optional: round corners on hover */
+  }
+  
+  /* Hides the default checkbox visually */
+  .menu-toggle {
+  display: none;
+  }
+  
+  /* Hide hamburger menu on desktop */
+  @media (max-width: 768px) {
+    /* Other styles remain the same */
+  
+    /* Correct placement of the hamburger menu */
+    .hamburger-menu {
+      display: ;
+      margin-left: auto;
+    }
+  
+    /* Other styles remain the same */
+  }
+  
+  /* Mobile specific styles */
+  @media (max-width: 768px) {
+    /* Hide the navigation list by default */
+    .top-nav .nav-list {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 60px; /* This value may need adjustment */
+      left: 0;
+      background: #000;
+    }
+  
+    /* Styles for the hamburger menu */
+    .hamburger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      cursor: pointer;
+    }
+  
+    /* Style for the bars of the hamburger menu */
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+  
+    /* When the checkbox is checked, change the appearance of the hamburger to a 'cross' and show the nav list */
+    #menu-toggle:checked + .hamburger-menu .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    #menu-toggle:checked + .hamburger-menu .bar:nth-child(2) {
+      opacity: 0;
+    }
+    #menu-toggle:checked + .hamburger-menu .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+    #menu-toggle:checked ~ .top-nav .nav-list {
+      display: flex;
+    }
+  }
+  
   /* Profile/User Section */
   .user-profile {
     text-align: center;
@@ -131,41 +223,3 @@
 
   
   
-
-  @media only screen and (max-width: 768px) {
-    /* Ensure the full menu is not displayed and only the hamburger is visible */
-    .top-nav {
-        display: none;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-    
-
-/* Hide the navigation list by default in mobile view */
-.nav-list {
-    display: none;
-}
-
-/* Hamburger menu icon styles */
-.hamburger-menu {
-    display: block; /* Show the hamburger icon */
-    cursor: pointer;
-}
-
-/* When .show class is added to .nav-list, display it as a block */
-.nav-list.show {
-    display: block;
-}
-
-/* Hamburger bars */
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-  }
