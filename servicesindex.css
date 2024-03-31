@@ -35,7 +35,7 @@
   
   .services-title {
     color: #000;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
 
   }
@@ -50,14 +50,14 @@
   }
   
   .services-content p { /* Assuming this is your paragraph */
-    font-size: 15px; /* Or any size you want */
+    font-size: 24px; /* Or any size you want */
     /* Rest of your styles */
   }
   
   
   .services-description {
     color: #555;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-family: 'Sulphur Point', sans-serif;
 
   }
@@ -89,7 +89,7 @@
   }
   
   .services-feature-title {
-    font-size: 1.25em; /* A larger font size for the title to stand out */
+    font-size: 1.50em; /* A larger font size for the title to stand out */
     margin-bottom: 10px; /* A small margin below the title */
     font-weight: bold; /* Bold font weight for the title */
   }
@@ -135,7 +135,8 @@
   .services-image-placeholder img {
     width: 90%; /* This will make the image responsive to the placeholder's width */
     height: 85%; /* This will make the image stretch to the placeholder's height. Might distort the image if the aspect ratio is not the same. */
-    object-fit: cover; /* This will cover the area of the placeholder without stretching the image */
+    object-fit: cover; 
+    border-radius: 30px;/* This will cover the area of the placeholder without stretching the image */
   }
   
   /* Add your image inside the .services-image-placeholder with a background property or <img> tag */
@@ -156,20 +157,13 @@
 
   }
   .comprehensive-section .section-title {
-    font-size: 3.5em 
+    font-size: 2.5em 
 }
   
-  .comprehensive-section .section-subtitle {
-    text-align: center;
-    font-size: 1em;
-    font-weight: bold;
-    margin-bottom: 20px;
-        font-family: 'Sulphur Point', sans-serif;
 
-  }
   
   .comprehensive-section .section-description {
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: justify; /* Justify the text as seen in the image */
     margin-bottom: 1.5em;
     font-family: 'Sulphur Point', sans-serif;
@@ -180,7 +174,6 @@
     display: flex;
     justify-content: space-around; /* Space between the service items */
     padding-bottom: 120px; /* Space at the bottom inside the border */
-    font-family: 'Sulphur Point', sans-serif;
 
   }
   
@@ -222,7 +215,7 @@
   }
   
   .mobile-end-device-description {
-    font-size: 21px;
+    font-size: 18px;
     margin-bottom: 1em;
     font-family: 'Sulphur Point', sans-serif;
 

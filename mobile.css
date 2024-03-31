@@ -102,7 +102,7 @@
   
     .services-description,
     .services-feature-desc {
-      font-size: calc(0.50em + 1vw); /* responsive font size */
+      font-size: calc(em + 1vw); /* responsive font size */
     }
   }
 
@@ -110,51 +110,69 @@
 
   /* Mobile Section  */
 /* Styles for mobile devices */
-@media only screen and (max-width: 767px) {
-    .mobile-end-device-section,
-    .support-section {
-      display: block; /* Stack the image and text content */
-    }
+
   
-    .mobile-end-device-content,
-    .support-content {
-      text-align: left; /* Align text to the left */
-      padding: 20px; /* Add some padding around the text */
-    }
-  
-    .mobile-end-device-image-placeholder,
-    .support-content .support-button {
-      width: 100%; /* Take the full width of the container */
-      margin-top: 20px; /* Add space above the image/button */
-      order: 2; /* Image/button will be displayed after the text on mobile */
-    }
-  
-    .mobile-end-device-buttons,
-    .support-button {
-      padding: 10px 20px; /* Larger padding for touch targets */
-      font-size: 1em; /* Suitable font size for mobile */
-      margin-top: 20px; /* Add some space above the buttons */
-      display: block; /* Display as block to take full width */
-      text-align: center; /* Center the button text */
+   
+    @media only screen and (max-width: 768px) {
+      .services-ai-firewall-section {
+        padding: 20px;
+        text-align: left; /* Consistent alignment */
+        font-size: 16px;
+        color: #000000; /* Light text for dark backgrounds */
+      }
+      .mobile-end-device-image-placeholder,
+      .support-content .support-button {
+        width: 100%; /* Take the full width of the container */
+        margin-top: 20px; /* Add space above the image/button */
+        order: 2; /* Image/button will be displayed after the text on mobile */
+      }
+    
+      .services-content {
+        width: 100%; /* Full width */
+        padding: 20px; /* Consistent padding */
+      }
+    
+      .services-content-title {
+        font-size: 1.5em; /* Scalable title size */
+        font-weight: bold; /* Bold for emphasis */
+        margin-bottom: 1em; /* Spacing below the title */
+        color: #000000; /* A color that pops against the dark background */
+      }
+    
+      .services-description,
+      .services-feature-desc {
+        font-size: 1em; /* Scalable text size */
+        line-height: 1.6; /* Readability line height */
+        color: #030303; /* Consistent text color */
+        margin-bottom: 1em; /* Spacing below paragraphs */
+      }
+    
+      .services-feature-item {
+        margin: 1em 0; /* Vertical spacing for items */
+      }
+      
+    
+      .services-btn-learn-more,
+      .services-btn-sign-up {
+        display: block; /* Full-width block display */
+        width: 100%; /* Full width for easier tap */
+        margin: 0.5em 0; /* Spacing around buttons */
+        padding: 0.5em; /* Touch-friendly padding */
+        text-align: center; /* Center text in buttons */
+        background-color: #293ef7; /* Eye-catching button color */
+        color: #ffffff; /* Text color for buttons */
+        border-radius: 0.5em; /* Rounded corners for aesthetic */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+        font-weight: bold; /* Bold text for call to action */
+      }
+    
+      .services-btn-learn-more:hover,
+      .services-btn-sign-up:hover {
+        background-color: #000dff; /* Slightly darker on hover for feedback */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+      }
     }
     
-    /* Adjust the image placeholder to display image properly */
-    .mobile-end-device-image-placeholder img {
-      max-width: 100%; /* Full width of its container */
-      height: auto; /* Maintain aspect ratio */
-      display: block; /* Display as block */
-      margin: 20px auto 0; /* Centered horizontally with margin top */
-    }
-  
-    /* Style for the button in the support section to make it stand out */
-    .support-button {
-      background-color: #007bff; /* Primary color for the button */
-      color: white; /* Text color for the button */
-      text-decoration: none; /* Remove underline */
-      border-radius: 5px; /* Rounded corners for the button */
-    }
-  }
-  
   
     .value-platform-stats {
       display: grid;
@@ -184,7 +202,48 @@
   
   
     /* Mobile Section  */
+    @media only screen and (max-width: 768px) {
+      .mobile-end-device-section {
+        flex-direction: column-reverse; /* Stack elements vertically, image below text */
+        align-items: flex-start; /* Align items to the start of the container */
+      }
+      
+      .mobile-end-device-content {
+        flex-basis: auto; /* Let it consume space as needed */
+        text-align: left; /* Align text to the left */
+      }
+      
+      .mobile-end-device-title {
+        font-size: calc(22px + 2vw); /* Responsive font size */
+        margin-bottom: 0.5em; /* Adjust spacing */
+        /* Font family is inherited from the body or specified in the root */
+      }
+      
+      .mobile-end-device-description {
+        font-size: calc(14px + 1vw); /* Responsive font size */
+        /* Font family is inherited from the body or specified in the root */
+      }
+      
+      .mobile-end-device-image-placeholder {
+        order: -1; /* Position the image above the text */
+        flex-basis: 100%; /* Take full width of the container */
+        height: auto; /* Adjust height automatically */
+        margin-top: 1em; /* Add space above the image */
+        border-radius: 15px;
+        border: none; /* Remove border if not needed */
+        background-image: url('/photos/application.webp');
+        background-size: cover;
+        background-position: center;
+        min-height: 300px; /* Give a minimum height to ensure visibility */
 
+        /* Remove the placeholder styles not needed for the actual image */
+      }
+    
+      .mobile-end-device-image-placeholder img {
+        width: 100%; /* Ensure image is not larger than its container */
+      }
+    }
+    
         /* Plan Section  */
 
 @media only screen and (max-width: 768px) {
@@ -288,24 +347,43 @@
   
     /*compranshive seciton */
 /* Email Image Section */
-@media only screen and (max-width: 767px) {
-    .email-services-section {
-      display: flex;
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center-align the items */
-    }
-  
-    .email-services-image-placeholder {
-      order: 2; /* Image will move to the bottom */
-      width: 100%; /* Full width */
-      margin-top: 20px; /* Space above the image */
-    }
-  
-    .email-services-image-placeholder img {
-      max-width: 100%; /* Responsive image size */
-      height: auto;
-    }
+@media only screen and (max-width: 768px) {
+  .email-services-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This will center align the content */
+    text-align: center; /* Center text alignment */
   }
+
+
+  .email-services-content {
+    margin-bottom: 20px; /* Space below the text content */
+  }
+
+
+  .email-services-description p {
+    font-size: 1.5em; /* Adjust size as necessary */
+    padding: 0 10px; /* Adds padding on the sides for better readability */
+  }
+  .email-services-content h2 {
+    font-size: 2.5em; /* Adjust size as necessary */
+    margin: 0; /* Removes default margins */
+    padding: 0 10px; /* Adds padding on the sides for better readability */
+  }
+
+
+  .email-services-image-placeholder {
+    order: 2; /* Image will be at the bottom */
+    width: 100%; /* Takes full width of the container */
+    margin-top: 20px; /* Space above the image */
+  }
+
+  .email-services-image-placeholder img {
+    max-width: 100%; /* Image will be responsive and take the max available width */
+    height: auto; /* Keep the aspect ratio */
+  }
+}
+
   
   
       /* Email Image Section */
