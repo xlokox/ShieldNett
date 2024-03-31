@@ -327,13 +327,84 @@
   
   
   /* You may need media queries to adjust the layout on smaller screens */
-  @media (max-width: 768px) {
-    .demo-request-content h1 {
-      font-size: 2em; /* Smaller font size on mobile */
+  @media only screen and (max-width: 768px) {
+    .testimonial-container {
+      padding: 20px;
+      text-align: center; /* Center align the text for mobile */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Align items in the center for a stacked layout */
     }
   
-    .demo-request-content p {
-      font-size: 0.9em; /* Smaller font size on mobile */
+    .testimonial-stars {
+      order: -1; /* Put the stars at the top */
+      padding-bottom: 10px; /* Add some space below the stars */
+    }
+  
+    .testimonial-rating {
+      display: flex;
+      justify-content: center; /* Center the stars within the rating */
+    }
+  
+    .testimonial-star {
+      font-size: 30px; /* Adjust star size */
+      color: #FFD700; /* Star color */
+    }
+  
+    .testimonial-quote {
+      font-size: 16px; /* Adjust quote size for better readability */
+      line-height: 1.6; /* Improve line spacing */
+      margin-top: 20px; /* Add some space above the quote */
+      margin-bottom: 20px; /* Add some space below the quote */
+    }
+  
+    .testimonial-author {
+      margin-top: 10px; /* Add space above the author details */
+      order: 2; /* Position the author details below the quote */
+    }
+  
+    .author-name {
+      font-weight: bold; /* Optional: make author name bold */
+      font-size: 18px; /* Adjust font size for the author's name */
+    }
+  
+    .author-title {
+      font-size: 16px; /* Adjust font size for the author's title */
+    }
+  
+    .testimonial-logo {
+      width: 50px; /* Adjust logo size */
+      height: 50px; /* Adjust logo size */
+      margin: 10px auto; /* Center the logo and add space around it */
+      background-size: contain; /* Make sure the logo fits within the div */
+      background-repeat: no-repeat;
+      background-position: center;
+      order: 3; /* Position the logo at the bottom */
     }
   }
+  
+    /* Testamonial Stars */
 
+    /* About Section fixing after the hero section */
+    @media only screen and (max-width: 768px) {
+      .about-section {
+        padding: 20px;
+      }
+    
+      .about-title-about {
+        font-size: 20px; /* Adjust the size to fit your design */
+        text-align: center; /* Center the title if needed */
+        margin-bottom: 10px; /* Add some space between the title and the content */
+        display: block; /* Ensure it's displayed as a block-level element */
+      }
+    
+      .about-title {
+        font-size: 18px; /* Adjust the size to fit your design */
+        line-height: 1.5; /* Add more line height for better readability */
+        text-align: justify; /* Justify the text for a clean layout */
+        margin-bottom: 20px; /* Add some space after the paragraph */
+      }
+    }
+    
+
+  
