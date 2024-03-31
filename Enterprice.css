@@ -22,44 +22,7 @@
   }
   
   
-@media only screen and (max-width: 768px) {
-    /* Ensure the full menu is not displayed and only the hamburger is visible */
-    .top-nav {
-        display: none;
-    }
 
-    .hamburger-menu {
-        display: block;
-    }
-    
-
-/* Hide the navigation list by default in mobile view */
-.nav-list {
-    display: none;
-}
-
-/* Hamburger menu icon styles */
-.hamburger-menu {
-    display: block; /* Show the hamburger icon */
-    cursor: pointer;
-}
-
-/* When .show class is added to .nav-list, display it as a block */
-.nav-list.show {
-    display: block;
-}
-
-/* Hamburger bars */
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-
-}
   
   /* Position the .top-bar at the very top */
   /* Position the .top-bar at the very top with no padding at the top */
@@ -109,7 +72,6 @@
     background-color: #333; /* Change background on hover */
     border-radius: 4px; /* Optional: round corners on hover */
   }
-
   .enterprise-section {
     max-width: 600px; /* Maximum width of the section */
     margin: 0 auto; /* Centers the section in the middle of the page */
@@ -296,5 +258,42 @@
     text-decoration: underline; /* Re-add underline on hover, if desired */
   }
   
-  
+  @media only screen and (max-width: 768px) {
+    /* Ensure the full menu is not displayed and only the hamburger is visible */
+    .top-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    
+
+/* Hide the navigation list by default in mobile view */
+.nav-list {
+    display: none;
+}
+
+/* Hamburger menu icon styles */
+.hamburger-menu {
+    display: block; /* Show the hamburger icon */
+    cursor: pointer;
+}
+
+/* When .show class is added to .nav-list, display it as a block */
+.nav-list.show {
+    display: block;
+}
+
+/* Hamburger bars */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+}
   
