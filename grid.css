@@ -55,20 +55,16 @@ body {
 /* Base styles */
 /* Base styles */
 .top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #000; /* Add a background color to the nav bar for visibility */
-  color: white;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px; /* Add some padding inside the nav bar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
+  width: 100%; /* Full width to extend the full viewport width */
+  max-width: 1080px; /* Max width set to 1080px */
+  margin: 0 auto; /* Centers the navigation bar */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Distribute space between logo and navigation items */
+  align-items: center; /* Align items vertically in the center */
+  padding: 0 20px; /* Padding on the sides */
+  /* Add other styles like background color, height, etc., as needed */
+  border-radius: 20px;
 }
-
 
 .logo-container .logo {
   font-size: 30px; /* Adjust the size as needed */
@@ -91,6 +87,7 @@ body {
 
 
 .top-nav .nav-list li a {
+  
   color: white; /* Adjust link color as needed */
   text-decoration: none; /* Remove underline from links */
   padding: 5px 10px; /* Adjust padding for clickable area */
@@ -100,6 +97,7 @@ body {
 
 /* Navigation link hover effect */
 .top-nav .nav-list li a:hover {
+  
   background-color: #333; /* Change background on hover */
   border-radius: 4px; /* Optional: round corners on hover */
 }
@@ -115,6 +113,7 @@ display: none;
 
 /* nav bar section */ 
 .hero-content h1 {
+  
     font-size: 4vw; /* Responsive font size based on the width of the viewport */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
     line-height: 1.2; /* Adjust line height for better readability */
@@ -127,6 +126,7 @@ display: none;
 
 
 .hero-content p {
+  
   font-size: 1.5vw;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
   line-height: 1.4;
@@ -172,19 +172,25 @@ display: none;
 
 
 
-/* Ensure main content takes up the space it needs, pushing the footer down */
-main {
-  flex: 1;
+.testimonials-container {
+  max-width: 1080px; /* Set the maximum width of the container */
+  margin: auto; /* Center the container on the page */
+  padding: 20px; /* Add some padding inside the container */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-around; /* Space out the children evenly */
+  flex-wrap: wrap; /* Allow items to wrap to next line on smaller screens */
+
 }
-.container {
-  max-width: 1440px; /* Maximum width of the container */
-  margin: 0 auto; /* Center the container */
-  text-align: center; /* Center text within the container */
-  padding: 50px 0; /* Adjust padding to position your text */
-  background-color: #f3f3f3; /* This color is an example; adjust as needed */
-  padding: 100px;
-  text-align: center;
-  border-radius: 100px;
+.testimonial {
+  /* Your existing styles for .testimonial */
+  flex-basis: calc(33.333% - 40px); /* Subtract the total padding from the flex-basis */
+  margin: 20px; /* Add some margin for spacing between testimonials */
+  transition: transform 0.3s ease; /* Smooth transition for the transform */
+
+
+}
+.testimonial:hover {
+  transform: translateY(-5px); /* Move the testimonial up by 5 pixels */
 }
 
 
@@ -221,6 +227,9 @@ main {
   margin: auto;
   border-radius: 10px;
   overflow: hidden;
+  max-width: 100%; /* Ensure the image is responsive within its container */
+    height: auto; /* Maintain aspect ratio */
+
   
 }
 
@@ -250,7 +259,7 @@ main {
 .testimonial {
   flex: 1 1 100%; /* On mobile, each testimonial takes full width, but can grow and shrink as needed */
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
   padding: 10px; /* Adds padding inside each testimonial */
   background: #fff; /* Optional: adds a background color */
   border-radius: 10px; /* Optional: rounds corners */
@@ -282,23 +291,8 @@ main {
   margin-bottom: 15px;
 }
 
-.learn-more-btn {
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px; /* Adjust padding to control button size */
-  border-radius: 5px;
-  display: block; /* Makes the button take the full width of its container */
-  width: auto; /* Adjust width as needed */
-  margin: 0 auto; /* Center button horizontally */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
-}
-
-.learn-more-btn:hover {
-  background-color: #0056b3;
-}
 .testimonial h3 {
-  font-size: 1.2em; /* Adjust the size as needed */
+  font-size: 1.4em; /* Adjust the size as needed */
   margin-bottom: 10px;
 }
 .testimonial p {
@@ -403,14 +397,16 @@ main {
 
 /* Pricing Section*/ 
 .pricing-options {
-  text-align: center;
-  padding: 40px 0;
+  max-width: 1080px; /* Set the maximum width */
+  margin: 0 auto; /* Center the section */
+  padding: 20px; /* Optional: add padding for better spacing */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
+
 
 .pricing-title {
   font-size: 2rem; /* Adjust size as needed */
   margin-bottom: 1rem; /* Space below the title */
-  font-family: 'Sulphur Point', sans-serif; /* Ensure you link this font in your HTML */
   color: #333; /* Adjust text color as needed */
 }
 
@@ -430,7 +426,10 @@ main {
   border-radius: 10px; /* Rounded corners for the plan */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow for some depth */
   width: 300px; /* Adjust width as needed */
+    transition: transform 0.3s ease; /* Smooth transition for the transform */
+    cursor: pointer; /* Change the cursor to indicate the items are interactive */
 }
+
 
 .plan:hover {
   transform: translateY(-5px);

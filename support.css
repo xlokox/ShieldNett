@@ -44,18 +44,15 @@
   }
   
   .top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #000; /* Add a background color to the nav bar for visibility */
-    color: white;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; /* Add some padding inside the nav bar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
+    width: 100%; /* Full width to extend the full viewport width */
+    max-width: 1080px; /* Max width set to 1080px */
+    margin: 0 auto; /* Centers the navigation bar */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Distribute space between logo and navigation items */
+    align-items: center; /* Align items vertically in the center */
+    padding: 0 20px; /* Padding on the sides */
+    /* Add other styles like background color, height, etc., as needed */
+    border-radius: 20px;
   }
   
   

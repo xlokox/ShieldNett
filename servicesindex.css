@@ -21,43 +21,34 @@
   /* Main Section */
   .services-ai-firewall-section {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align the tops of the items */
     justify-content: space-between;
-    padding: 100px;
-    border: 3px solid #ddd; /* Borderline */
-
+    max-width: 1080px;
+    margin: 0 auto; /* Center the section */
+    gap: 20px; /* Space between the text and the image */
+    padding: 0 10px; /* Space on the sides within the 1080px width */
+    box-sizing: border-box; /* Include padding in the width calculation */
   }
   
   .services-content {
-    width: 60%; /* Adjust the width as necessary */
-    
+    flex: 1; /* Take up the remaining space */
+    padding-right: 20px; /* Add padding on the right */
   }
   
-  .services-title {
-    color: #000;
-    font-size: 2rem;
-    margin-bottom: 2rem;
 
-  }
-  .services-content h2 { /* Assuming this is your heading */
-    font-size: 35px; /* Or any size you want */
-    /* Rest of your styles */
-    
-  }
-  .services-content h3 { /* Assuming this is your heading */
-    font-size: 25px; /* Or any size you want */
-    /* Rest of your styles */
-  }
-  
-  .services-content p { /* Assuming this is your paragraph */
-    font-size: 24px; /* Or any size you want */
-    /* Rest of your styles */
+
+
+
+  .services-content h3,
+  .services-content p {
+    margin: 0 0 20px; /* Adjusted margins */
+    font-size: 0.8em; /* Adjusted font size for consistency */
   }
   
   
   .services-description {
     color: #555;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     font-family: 'Sulphur Point', sans-serif;
 
   }
@@ -89,10 +80,18 @@
   }
   
   .services-feature-title {
-    font-size: 1.50em; /* A larger font size for the title to stand out */
+    font-size: 3em; /* A larger font size for the title to stand out */
     margin-bottom: 10px; /* A small margin below the title */
     font-weight: bold; /* Bold font weight for the title */
   }
+  .services-content-title {
+    font-size: 2em; /* or any other size you prefer */
+    font-weight: bold; /* if you want it to be bold */
+    line-height: 1.2; /* Adjust the line height for better readability */
+    margin-bottom: 20px; /* Space after the title */
+    color: #333; /* Adjust the color as needed */
+  }
+  
   
   .services-feature-desc {
     font-size: 1em; /* Standard font size for the description */
@@ -115,40 +114,45 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    
   }
   
   .services-btn-learn-more:hover,
   .services-btn-sign-up:hover {
     background-color: #0056b3;
   }
-  
+  .services-content,
   .services-image-placeholder {
-    width: 40%; /* Adjust the width as necessary */
-    height: 350px; /* Adjust the height as necessary */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; 
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Distribute space between items */
+    height: 100%; /* Full height of their container */
+    flex: 1; /* Both take up equal space */
+    
+
+  }
     /* This will ensure that if the image is larger than the placeholder, it will not spill out */
-  }
   
-  .services-image-placeholder img {
-    width: 90%; /* This will make the image responsive to the placeholder's width */
-    height: 85%; /* This will make the image stretch to the placeholder's height. Might distort the image if the aspect ratio is not the same. */
-    object-fit: cover; 
-    border-radius: 30px;/* This will cover the area of the placeholder without stretching the image */
-  }
+    .services-image-placeholder img {
+      width: 100%; /* Full width of its container */
+      height: auto; /* Adjust height to maintain aspect ratio */
+      object-fit: cover; /* Cover the area of the container */
+      border-radius: 15px;
+      height: 405px;
+    }
   
   /* Add your image inside the .services-image-placeholder with a background property or <img> tag */
 
 /* comperhensive section */
-.comprehensive-section {
-    max-width: 850px; /* or whatever max width you prefer */
-    margin: 0 auto; /* This centers the section */
-    padding: 40px; /* Add some padding */
-    font-family: 'Sulphur Point', sans-serif;
+.comprehensive-section,
+.service-box {
+  max-width: 1080px;
+  margin: 0 auto; /* This centers your sections */
+}
 
-  }
+.comprehensive-section {
+  text-align: left; /* Aligns text to the left */
+}
   .section-subtitle {
     font-size: 1em;
     margin-bottom: 0.5em;
@@ -156,9 +160,12 @@
     font-family: 'Sulphur Point', sans-serif;
 
   }
-  .comprehensive-section .section-title {
-    font-size: 2.5em 
-}
+  .comprehensive-section .section-subtitle,
+  .comprehensive-section .section-title,
+  .comprehensive-section .section-description {
+    /* Assuming you want these texts to start from left to right as well */
+    text-align: left;
+  }
   
 
   
@@ -172,15 +179,17 @@
   
   .service-box {
     display: flex;
-    justify-content: space-around; /* Space between the service items */
-    padding-bottom: 120px; /* Space at the bottom inside the border */
+    flex-wrap: wrap; /* Allows items to wrap in the container */
+    gap: 20px; /* Adds a gap between the items */
+    justify-content: flex-start; /* Aligns items to the start of the container, from left to right */
+  }
 
-  }
-  
-  .service-item {
-    text-align: center;
-    width: 30%; /* Approximate width for each service item */
-  }
+
+ .service-item {
+  width: 100%; /* Each item takes full width of its parent container, 
+                  assuming you want them stacked on top of each other */
+  text-align: left; /* Aligns text to the left within each service item */
+}
   
 
   .service-item p {
@@ -196,17 +205,14 @@
 
   /* Mobile Section */
 
-  .mobile-end-device-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+
+  .mobile-end-device-content,
+  .support-content {
+    text-align: left; /* Aligns text to the left */
+    margin-top: 85px; /* Add a gap at the top */
+
   }
-  
-  .mobile-end-device-content {
-    flex-basis: 50%; /* Use flex-basis for flexible sizing */
-  }
-  
+
   .mobile-end-device-title {
     font-size: 55px;
     margin-bottom: 1em;
@@ -221,11 +227,14 @@
 
   }
   
-
+.mobile-end-device-title,
+.support-content-title {
+  font-size: 1.5rem; /* Adjust the font size for the titles */
+}
   
   .mobile-end-device-image-placeholder {
     flex-basis: 44.5%; /* Adjust accordingly */
-    height: 550px; /* Your desired height */
+    height: 500px; /* Your desired height */
     background-color: #f0f0f0; /* Placeholder color */
     display: flex;
     justify-content: center;
@@ -234,16 +243,33 @@
   }
   
   .mobile-end-device-image-placeholder img {
-    max-width: 100%;
-    height: auto;
+    max-width: 80%; /* Make the image smaller, adjust the percentage as needed */
+    display: block; /* This will allow margin auto to center the image */
+    margin: 0 auto; /* Center the image horizontally */
   }
+  
   .mobile-end-device-image-placeholder {
     background-image: url('/photos/application.webp');
     background-size: cover;
     background-position: center;
     border-radius: 15px;
+    margin-bottom: 85px; /* Adds space at the bottom */
+
   }
+
+
+
+
+
+  
         /* support Section */
+        .mobile-end-device-section,
+        .support-section {
+          max-width: 1080px;
+          margin: 0 auto; /* Center the sections within their container */
+          border-radius: 20px;
+        }
+        
         .support-section {
             background-image: url('/photos/supportsection.webp');
             background-size: cover;
@@ -253,62 +279,78 @@
             padding: 250px 0; /* Adjust the padding to ensure the content is vertically centered */
           }
           
-          .support-content h1 {
-            font-size: 2.5em; /* Adjust font size as needed */
-            margin-bottom: 0.5em;
-            font-family: 'Sulphur Point', sans-serif;
-
+          .support-content {
+            text-align: left; /* Align the text to the left */
+            display: flex;
+            flex-direction: column; /* Stack the elements */
+            justify-content: center; /* Center content vertically */
+            padding: 20px; /* Add some padding */
+          }
+          
+          .support-content h1, 
+          .support-content-title, 
+          .support-content-subtitle, 
+          .support-content p {
+            background-color: transparent; /* Remove background color */
+            margin: 0; /* Remove any default margin */
+            line-height: 1.2; /* Adjust line height for readability */
           }
           
           .support-content-title {
-            background-color: rgba(14, 7, 7, 0.5); /* Adjust background color and opacity as needed */
-            padding: 10px; /* Adjust the padding to fit your design */
+            font-size: larger; /* Adjust the font size as needed */
+            align-self: flex-start; /* Align to the start of the flex container */
           }
           
-          .support-content-subtitle {
-            padding: 5px; /* Adjust the padding to fit your design */
-           font-family: 'Sulphur Point', sans-serif;
-
-          }
+          .support-content-subtitle,
           .support-content p {
-            font-size: 1.2em; /* Adjust font size as needed */
-            font-family: 'Sulphur Point', sans-serif;
-            background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity as needed */
-            padding: 5px; /* Adjust the padding to fit your design */
-            
-
-
+            font-size: 1em; /* Adjust the font size for the paragraph */
+            line-height: 1.6; /* Adjust the line height for better readability */
+            margin-top: 10px; /* Adjust top margin to space out from title */
+            margin-bottom: 10px; /* Adjust bottom margin to space out before next content */
+            max-width: 800px; /* Set a max width to match the title */
+            /* Your additional styles for paragraph */
           }
+     
           .support-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #6a45ff; /* Adjust button color as needed */
-            color: white;
-            text-transform: uppercase;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-            font-family: 'Sulphur Point', sans-serif;
-
+            padding: 10px 15px; /* Adds padding around the text */
+            font-size: 16px; /* Sets the size of the font */
+            background-color: #007bff; /* The button's background color */
+            color: white; /* The color of the text on the button */
+            text-decoration: none; /* Removes the underline from the text */
+            border-radius: 4px; /* Rounds the corners of the button */
+            display: inline-block; /* Makes the element inline-block so it only takes up as much space as it needs */
+            cursor: pointer; /* Changes the cursor to indicate it's clickable */
+            transition: all 0.3s ease-in-out; /* Smooth transition for visual effects */
           }
+          
+          /* Adjusts the hover state of the button for user feedback */
           .support-button:hover {
-            background-color: #5838ff; /* Darker shade for hover effect */
+            background-color: #0056b3; /* Darkens the button on hover */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a shadow for depth */
           }
+          
+          /* You can also add media queries if you want to adjust the size specifically for mobile or tablet views */
+    
+          
       /* support Section */
 
   /* Add your image inside the .mobile-end-device-image-placeholder with a background property or <img> tag */
     /* Get A Demo Section */
     .value-platform-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center the content */
-        padding: 100px 0;
-      }
+      display: flex;
+      flex-direction: column; /* if you want a vertical layout */
+      /* or 'flex-direction: row;' if you want a horizontal layout */
+      align-items: center; /* This will center the content on the cross axis */
+      justify-content: center; /* This will center the content on the main axis if 'flex-direction: column;' is used */
+      max-width: 1080px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px; /* Or adjust as needed */
+    }
       
       .value-platform-content {
-        text-align: center; /* Center the text */
+        text-align: center;
+        flex: 1; /* Center the text */
       }
       
       .value-platform-content h2 {
@@ -378,20 +420,20 @@
         margin-top: 1em;
       }
       
-        /* Get A Demo Section */
-
-        .email-services-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #f5f5f5; /* Replace with your preferred background color */
-          }
+      .email-services-section {
+        display: flex;
+        justify-content: center; /* This will center the content within the entire section */
+        max-width: 1080px; /* Maximum width of the combined blocks */
+        margin: 0 auto; /* This centers the section in the middle of the page */
+        gap: 20px; /* This sets a gap between text and image */
+        padding: 0 10px; /* This adds some padding on the left and right */
+      }
+      
           
-          .email-services-content {
-            width: 60%;
-            padding: 20px;
-          }
+        .email-services-content {
+          max-width: 1080px; /* Max width for the text content */
+          margin-right: 20px; /* Space between text and image */
+        }
           
           .email-services-title {
             font-size: 24px;
@@ -401,6 +443,7 @@
             font-family: 'Sulphur Point', sans-serif;
 
           }
+          
           
           .email-services-description {
             font-size: 16px;
@@ -520,9 +563,10 @@
   .email-services-image-placeholder {
     /* Make the div responsive to the size of its container */
     width: 100%;
-    max-width: 400px; /* or any maximum size you prefer */
+    max-width: 1080px; /* or any maximum size you prefer */
     margin: auto; /* this will center the div if it's smaller than its container */
     overflow: hidden; /* ensures nothing spills out of the div */
+    border-radius: 15px;
 }
           
 .email-services-image-placeholder img {

@@ -332,6 +332,9 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       text-align: left; /* Align text to the left */
       padding: 15px; /* Add some padding for better readability */
+        width: calc((100% / 3) - 20px); /* Splits the row into three columns, subtracting the gap */
+      
+    
     }
  
       
