@@ -2,7 +2,9 @@
   
   .hero-header-services{
     min-height: 100vh;
-    background-image: url('/photos/DALL·E\ 2024-03-23\ 13.37.50\ -\ Design\ an\ image\ that\ centers\ around\ a\ single\ ShieldNet\ logo\,\ which\ includes\ a\ shield\ and\ a\ red\ heart\,\ to\ represent\ the\ company\'s\ services.\ The\ logo\ sh.webp');
+    background-image: url('/photos/morerealisitc.webp');
+   
+
     background-size: cover; 
     background-position: center; /* Center the background */
     display:grid;
@@ -16,17 +18,16 @@
   }
   .hero-content-services h1 {
     display: inline; /* Only takes up as much space as necessary */
-    font-size: 2.1rem;
-    line-height: 1;
+    font-size: 2.3rem;
+    line-height: 1.2;
     margin: 0;
     color: #ffffff;
     background-color: rgba(1, 31, 61, 0.7);
     padding: 0.1em 0.3em; /* Adjust padding to create some space around the text */
-    border-radius: 20px;
   }
 
   .hero-content-services p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.4;
     margin: 10px 0; /* Space above and below paragraph */
     padding: 0.1em 0.3em; /* Adjust padding to create some space around the text */
