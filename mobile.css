@@ -23,7 +23,7 @@
 @media (max-width: 767px) {
   .hero-header-services {
     min-height: 60vh; /* You can adjust this value to fit mobile screens */
-    background-image: url('/photos/DALL·E\ 2024-03-23\ 13.37.50\ -\ Design\ an\ image\ that\ centers\ around\ a\ single\ ShieldNet\ logo\,\ which\ includes\ a\ shield\ and\ a\ red\ heart\,\ to\ represent\ the\ company\'s\ services.\ The\ logo\ sh.webp'); /* Optional: Different image for mobile */
+    background-image: url('/photos/morerealisitc.webp'); /* Optional: Different image for mobile */
     padding-top: 10px; /* Reduced padding */
     background-attachment: scroll; /* Fixed backgrounds can be problematic on mobile */
   }
