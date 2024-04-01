@@ -445,6 +445,7 @@ display: none;
   margin-right: 10px; /* Adjust the space between the icon and the text */
   color: var(--text-color); /* Adjust color as needed */
   font-weight: bold; /* Make the checkmark bold */
+  color: green;
 }
 
 .pl-popular-badge {
