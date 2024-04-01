@@ -159,7 +159,7 @@
         margin: 0.5em 0; /* Spacing around buttons */
         padding: 0.5em; /* Touch-friendly padding */
         text-align: center; /* Center text in buttons */
-        background-color: #293ef7; /* Eye-catching button color */
+        background-color: #000000; /* Eye-catching button color */
         color: #ffffff; /* Text color for buttons */
         border-radius: 0.5em; /* Rounded corners for aesthetic */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
