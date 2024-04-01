@@ -47,6 +47,29 @@
     /* Additional styling for the logo */
   }
   
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000; /* Add a background color to the nav bar for visibility */
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Add some padding inside the nav bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
+  }
+  
+  
+  .logo-container .logo {
+    font-size: 30px; /* Adjust the size as needed */
+    color: white; /* Adjust color as needed */
+    text-decoration: none; /* Remove underline from links if necessary */
+    /* Additional styling for the logo */
+  }
+  
   .top-nav .nav-list {
     list-style-type: none;
     padding: 0;
@@ -85,7 +108,6 @@
   
     /* Correct placement of the hamburger menu */
     .hamburger-menu {
-      display: ;
       margin-left: auto;
     }
   
@@ -142,31 +164,32 @@
   /* Main Section */
 /* CSS */
 .future-page-container {
-    width: 100%;
-    /* Additional styling */
-  }
+  width: 100%; /* Use the full width of the viewport */
+  max-width: 1080px; /* Maximum width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add some horizontal padding */
+}
+
+.future-page-hero {
+  text-align: center; /* Center the text inside the hero section */
+  padding: 40px 0; /* Add some vertical padding */
+}
+
   
-  .future-page-hero {
-    text-align: center;
-    padding: 50px 20px;
-    /* Additional styling */
-  }
+.future-page-title {
+  font-size: 2.5rem; /* Adjust the size as necessary */
+  margin-bottom: 20px; /* Space below the title */
+}
   
-  .future-page-title {
-    font-size: 2.5em; /* Example size */
-    color: #333; /* Example color */
-    /* Additional styling */
-  }
-  
-  .future-page-subtitle {
-    font-size: 2em;
-    margin-top: 20px;
-    /* Additional styling */
-  }
+.future-page-subtitle {
+  font-size: 1.5rem; /* Adjust the size as necessary */
+  margin-bottom: 40px; /* Space below the subtitle */
+}
   
   .future-page-image-placeholder {
     width: 100%; /* Or a specific size */
-    height: 500px; /* Or the height you want */
+    max-width: 1080px; /* Maximum width of the image */
+    height: 410px; /* Or the height you want */
     background-color: #ececec; /* Placeholder color */
     margin-top: 30px;
     /* Add a path to the image when ready or keep as a placeholder */
@@ -177,71 +200,92 @@
   }
 
   /* Enhanced Firewall Protection Section CSS */
-.enhanced-firewall-section {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f8f8f8; /* Example background color */
+  .enhanced-firewall-section {
+    width: 100%; /* Full viewport width */
+    max-width: 1080px; /* Maximum width */
+    margin: 0 auto; /* Center the section */
+    padding: 20px; /* Padding on all sides */
+    box-sizing: border-box; /* Include padding in the width */
   }
-  
   .enhanced-firewall-title {
-    font-size: 2em;
-    margin-bottom: 1.5em;
+    font-size: 2rem; /* Adjust title size */
+    margin-bottom: 1.5rem; /* Space below the title */
+    text-align: center; /* Center-align the title */
   }
   
   .enhanced-firewall-features {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid; /* Use grid layout for features */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
   }
   
   .enhanced-feature {
-    width: 30%; /* Adjust width based on preference */
-    margin-bottom: 1em;
+    padding: 15px; /* Padding inside each feature */
   }
-  
 
-  
+  .feature-icon {
+    /* Add styles for your icons here */
+    margin-bottom: 1rem; /* Space below the icon */
+    display: block; /* Ensure it's block level for margin to work */
+    /* Add other icon styles as necessary */
+  }
   .feature-title {
-    font-size: 1.2em;
-    margin: 0.5em 0;
+    font-size: 1.5rem; /* Smaller font size for feature titles */
+    margin-bottom: 1rem; /* Space below the title */
   }
   
   .feature-description {
-    font-size: 1em;
-    margin-bottom: 1em;
+    font-size: 1rem; /* Smaller font size for descriptions if necessary */
+    line-height: 1.6; /* Good line height for readability */
   }
-  
 
 
   
   /* Add additional styles as needed */
   
-  /* Safer Digital Future Section CSS */
   .digital-future-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    /* Add media query for tablet viewports if needed */
+    display: flex; /* Establish a flex container */
+    flex-wrap: wrap; /* Allow the items to wrap as needed */
+    justify-content: center; /* Center the items on the main axis */
+    max-width: 1080px; /* Set maximum width of the section */
+    margin: 0 auto; /* Center the section within the viewport */
+    padding: 20px; /* Add some padding around the content */
+    box-sizing: border-box; /* Include padding and border in the width */
+    background-color: #f7f5f5;
   }
   
   .digital-future-content {
-    flex: 1;
-    padding-right: 20px; /* Adjust the spacing between the text and the image */
+    flex: 1; /* Allow the content to grow and shrink as needed */
+    max-width: 500%; /* Maximum width of content area */
+    padding: 10px; /* Padding around the text */
   }
-  
+
+
   .digital-future-image-placeholder {
     flex: 1;
     max-width: 40%; /* Adjust to fit the size in your wireframe */
     height: auto; /* This will maintain the aspect ratio of the image */
   }
   
-  .digital-future-image-placeholder img {
-    width: 100%;
-    height: auto; /* This will maintain the aspect ratio of the image */
-    display: block; /* Remove any default inline spacing */
-    border-radius: 20px;
+  .digital-future-description {
+    font-size: 1rem; /* Set the size of the description text */
+    line-height: 1.6; /* Good line height for readability */
   }
+.digital-future-title {
+  font-size: 1.75rem; /* Set the size of the title */
+  margin-bottom: 1rem; /* Space below the title */
+}
+.digital-future-image-placeholder {
+  flex: 1; /* Allow the image placeholder to grow and shrink */
+  max-width: 50%; /* Maximum width of image area */
+  padding: 10px; /* Padding around the image */
+}
+.digital-future-image-placeholder img {
+  width: 100%; /* Make the image responsive to the size of its container */
+  height: auto; /* Keep the image's aspect ratio */
+  max-width: 540px; /* Optional: Limit the size of the image */
+  border-radius: 8px; /* Optional: Rounded corners for the image */
+}
     /* Example media query for tablet adjustments */
     @media (max-width: 768px) {
         .digital-future-section {
@@ -284,4 +328,73 @@
     text-decoration: underline; /* Re-add underline on hover, if desired */
   }
   
+  .contact-section {
+    display: flex;
+    justify-content: space-between; /* Space between the text and image */
+    align-items: center; /* Vertical alignment */
+    padding: 40px;
+    max-width: 1000px; /* Adjust based on your layout width */
+    margin: auto; /* Centering the container */
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    font-family: 'Sulphur Point', sans-serif;
+  
+  }
+  
+  .contact-details {
+    width: 50%; /* Allocate width to the text section */
+    padding-right: 20px; /* Space between the text and the image */
+  }
+  
+  .contact-image {
+    width: 50%; /* Allocate width to the image section */
+    text-align: center; /* Center the image if smaller than the allocated width */
+  }
+  
+  .contact-header {
+    font-size: 2.5rem; /* Adjust the font size of the header */
+    margin-bottom: 0.5rem; /* Reduce space below the header */
+    color: #000000; /* Dark color for the header for better contrast */
+  }
+  
+  .contact-text {
+    font-size: 1rem; /* Standard font size for contact details */
+    color: #000000; /* Dark grey color for contact text */
+    line-height: 1.5; /* Space between lines */
+    font-family: 'Sulphur Point', sans-serif;
+  
+  }
+  
+  .contact-details a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .contact-details a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+  }
+  
+  /* Image styles */
+  .contact-image img {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  footer {
+    background-color: #0a0a0a; /* Example background color */
+    color: white;
+    text-align: left;
+    padding: 10px;
+    width: 100%; /* Footer should take full width */
+  }
+  
+  /* Ensure no other styles are interfering with footer positioning */
+  footer p {
+    margin: 0; /* Remove margin to prevent unnecessary spacing */
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  .text-position{
+    text-align: center;
+
+  }
   

@@ -489,4 +489,14 @@
         /* About Section fixing after the hero section */
 
 
-  
+  /* Handling responsiveness */
+@media (max-width: 768px) {
+  .contact-details,
+  .contact-image {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .contact-section {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+}

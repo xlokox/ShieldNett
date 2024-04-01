@@ -101,7 +101,6 @@
   
     /* Correct placement of the hamburger menu */
     .hamburger-menu {
-      display: ;
       margin-left: auto;
     }
   
@@ -235,10 +234,62 @@
   /* Responsive Styles */
 
   /* Footer CSS */
-footer {
+  .contact-section {
+    display: flex;
+    justify-content: space-between; /* Space between the text and image */
+    align-items: center; /* Vertical alignment */
+    padding: 40px;
+    max-width: 1000px; /* Adjust based on your layout width */
+    margin: auto; /* Centering the container */
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    font-family: 'Sulphur Point', sans-serif;
+  
+  }
+  
+  .contact-details {
+    width: 50%; /* Allocate width to the text section */
+    padding-right: 20px; /* Space between the text and the image */
+  }
+  
+  .contact-image {
+    width: 50%; /* Allocate width to the image section */
+    text-align: center; /* Center the image if smaller than the allocated width */
+  }
+  
+  .contact-header {
+    font-size: 2.5rem; /* Adjust the font size of the header */
+    margin-bottom: 0.5rem; /* Reduce space below the header */
+    color: #000000; /* Dark color for the header for better contrast */
+  }
+  
+  .contact-text {
+    font-size: 1rem; /* Standard font size for contact details */
+    color: #000000; /* Dark grey color for contact text */
+    line-height: 1.5; /* Space between lines */
+    font-family: 'Sulphur Point', sans-serif;
+  
+  }
+  
+  .contact-details a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .contact-details a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+  }
+  
+  /* Image styles */
+  .contact-image img {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+
+  footer {
     background-color: #0a0a0a; /* Example background color */
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 10px;
     width: 100%; /* Footer should take full width */
   }
@@ -247,6 +298,10 @@ footer {
   footer p {
     margin: 0; /* Remove margin to prevent unnecessary spacing */
     font-family: 'Sulphur Point', sans-serif;
-
+  
+  }
+  .text-position{
+    text-align: center;
+  
   }
   

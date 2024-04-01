@@ -68,7 +68,7 @@ body {
 
 .logo-container .logo {
   font-size: 30px; /* Adjust the size as needed */
-  color: white; /* Adjust color as needed */
+  color: rgb(255, 255, 255); /* Adjust color as needed */
   text-decoration: none; /* Remove underline from links if necessary */
   /* Additional styling for the logo */
 }
@@ -114,13 +114,14 @@ display: none;
 /* nav bar section */ 
 .hero-content h1 {
   
-    font-size: 4vw; /* Responsive font size based on the width of the viewport */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
-    line-height: 1.2; /* Adjust line height for better readability */
-    margin: 0; /* Reset margin */
-    padding: 0 2vw; /* Padding on the sides */
-    color: #ffffff; /* White color for the text */
-    background-color: rgba(0, 0, 0, 0.5);
+  display: inline; /* Only takes up as much space as necessary */
+  font-size: 4vw;
+  line-height: 1;
+  margin: 0;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.05em 0.6em; /* Adjust padding to create some space around the text */
+  border-radius: 20px;
 
 }
 
@@ -128,12 +129,13 @@ display: none;
 .hero-content p {
   
   font-size: 1.5vw;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
   line-height: 1.4;
   margin: 10px 0; /* Space above and below paragraph */
-  padding: 0 2vw;
+  padding: 0.1em 0.3em; /* Adjust padding to create some space around the text */
   color: #ffffff; /* White color for the text */
-  background-color:  rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px; /* Rounded corners */
+  display: inline-block; /* Al */
 }
 
 
@@ -159,7 +161,7 @@ display: none;
 }
 
 .btn.get-started:hover {
-  background-color: #5A23F0; /* Darker purple on hover */
+  background-color: #000000; /* Darker purple on hover */
   transform: scale(1.05); /* Slightly increase the scale of the button */
 }
 
@@ -242,9 +244,11 @@ display: none;
   display: inline-block; /* To apply padding and margins */
   margin-top: 10px; /* Spacing above the link */
   text-decoration: none; /* Remove underline */
-  color: #007bff; /* Link color */
+  color: #000000; /* Link color */
 }
-
+.learn-more-btn{
+  color: #000000;
+}
 
 
 /* Testimonial Section */ 
@@ -372,13 +376,9 @@ display: none;
   transition: background-color 0.3s ease;
 }
 
-.learn-more {
-  background-color: #007bff;
-  color: white;
-}
 
 .sign-up {
-  background-color: #5cb85c;
+  background-color: #000000;
   color: white;
 }
 
@@ -397,93 +397,82 @@ display: none;
 
 /* Pricing Section*/ 
 .pricing-options {
-  max-width: 1080px; /* Set the maximum width */
-  margin: 0 auto; /* Center the section */
-  padding: 20px; /* Optional: add padding for better spacing */
-  box-sizing: border-box; /* Include padding in the element's total width and height */
+  max-width: 1080px;
+  margin: 0 auto; /* Center the pricing section */
+  text-align: center;
+  padding: 20px;
 }
-
 
 .pricing-title {
-  font-size: 2rem; /* Adjust size as needed */
-  margin-bottom: 1rem; /* Space below the title */
-  color: #333; /* Adjust text color as needed */
+  font-family: 'Sulphur Point', sans-serif; /* Assuming you have this font loaded */
 }
 
-
-
+.best-price {
+  display: block;
+  font-size: 0.9em; /* Smaller font size for the 'Best Price' tag */
+  font-weight: bold; /* Make it bold */
+  color: #FFD700; /* Gold color for the 'Best Price' tag to make it stand out */
+  background-color: #333; /* Dark background for the tag */
+  padding: 5px 10px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners for the tag */
+  position: absolute; /* Position it relative to the parent */
+  top: -10px; /* Position it above the plan box */
+  left: 10px; /* Position it from the left side of the plan box */
+  transform: translate(0, -100%); /* Ensure it's above the plan box */
+  z-index: 10; /* Make sure it's above other items */
+}
 .plans {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 2rem;
+  justify-content: space-around; /* Distribute space between plans */
+  flex-wrap: wrap; /* Wrap onto the next line if space is not enough */
 }
-
 
 .plan {
-  background: #ffffff; /* Background color for the plan */
+  background-color: #f9f9f9; /* Light background for each plan */
+  border: 1px solid #ddd; /* Border for the plan */
   padding: 20px;
-  border-radius: 10px; /* Rounded corners for the plan */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow for some depth */
-  width: 300px; /* Adjust width as needed */
-    transition: transform 0.3s ease; /* Smooth transition for the transform */
-    cursor: pointer; /* Change the cursor to indicate the items are interactive */
-}
-
-
-.plan:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin: 10px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  width: calc(33.333% - 20px); /* Three items per row minus margin */
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: space-between; /* Distribute space */
 }
 
 .plan-title {
-  font-size: 1.5rem; /* Adjust size as needed */
-  color: #333; /* Text color for the plan title */
-  margin-bottom: 1rem; /* Space below the plan title */
+  font-size: 24px; /* Size of the plan title */
+  margin-bottom: 10px; /* Space below the title */
 }
 
 .price {
-  font-size: 2.5rem; /* Adjust size as needed */
-  color: #333; /* Text color for the price */
-  margin-bottom: 1rem; /* Space below the price */
+  font-size: 30px; /* Size of the price */
+  font-weight: bold;
+  margin-bottom: 20px; /* Space below the price */
 }
 
 .plan-features {
-  list-style: none; /* Remove default list styles */
-  padding: 0; /* Remove padding */
-  text-align: left; /* Align text to the left within the plan */
-  margin-bottom: 2rem; /* Space below the feature list */
+  list-style: none; /* Remove list bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0 0 20px; /* Space below the features list */
 }
-
 
 .plan-features li {
-  margin-bottom: 0.5rem; /* Space between list items */
-  font-family: 'Sulphur Point', sans-serif; /* Ensure you link this font in your HTML */
-}
-.verified-icon {
-  color: #28a745; /* Bootstrap success color for the checkmark */
-  font-size: 1.2rem;
-  margin-right: 8px;
+  margin-bottom: 10px; /* Space between list items */
 }
 
 .plan-btn {
-  background-color: #007bff; /* Button background color */
-  color: white; /* Button text color */
-  text-decoration: none; /* Remove underline from links */
+  background-color: #000000; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none; /* Remove underline */
   padding: 10px 20px; /* Padding inside the button */
   border-radius: 5px; /* Rounded corners for the button */
-  transition: background-color 0.3s; /* Smooth background color transition on hover */
-  display: inline-block; /* Display as inline-block for proper padding and margin */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
 .plan-btn:hover {
-  background-color: #0056b3; /* Darker background color on hover */
-}
-
-/* Styles for when no unique styles are needed for the 'Get started' buttons of each plan */
-.get-started-basic,
-.get-started-advanced {
-  font-size: 1rem; /* Adjust as needed */
+  background-color: #0056b3; /* Button hover color */
 }
 
 
@@ -526,7 +515,7 @@ display: none;
 
 .newsletter-form button {
   padding: 10px 20px;
-  background-color: #0056b3;
+  background-color: #000000;
   color: white;
   border: none;
   border-radius: 5px;
@@ -539,15 +528,14 @@ display: none;
 
 .newsletter-form .disclaimer {
   font-size: 0.8rem;
-  color: #777;
+  color: #000000;
 }
-
 .contact-section {
   display: flex;
   justify-content: space-between; /* Space between the text and image */
   align-items: center; /* Vertical alignment */
   padding: 40px;
-  max-width: 1000px; /* Adjust based on your layout width */
+  max-width: 1080px; /* Adjust based on your layout width */
   margin: auto; /* Centering the container */
   flex-wrap: wrap; /* Ensure wrapping on smaller screens */
   font-family: 'Sulphur Point', sans-serif;
@@ -567,12 +555,12 @@ display: none;
 .contact-header {
   font-size: 2.5rem; /* Adjust the font size of the header */
   margin-bottom: 0.5rem; /* Reduce space below the header */
-  color: #333; /* Dark color for the header for better contrast */
+  color: #000000; /* Dark color for the header for better contrast */
 }
 
 .contact-text {
   font-size: 1rem; /* Standard font size for contact details */
-  color: #555; /* Dark grey color for contact text */
+  color: #000000; /* Dark grey color for contact text */
   line-height: 1.5; /* Space between lines */
   font-family: 'Sulphur Point', sans-serif;
 
@@ -593,17 +581,10 @@ display: none;
   height: auto; /* Maintain aspect ratio */
 }
 
-
-
-
-
-
-
-/* Footer CSS */
 footer {
   background-color: #0a0a0a; /* Example background color */
   color: white;
-  text-align: center;
+  text-align: left;
   padding: 10px;
   width: 100%; /* Footer should take full width */
 }
@@ -611,6 +592,10 @@ footer {
 /* Ensure no other styles are interfering with footer positioning */
 footer p {
   margin: 0; /* Remove margin to prevent unnecessary spacing */
+  font-family: 'Sulphur Point', sans-serif;
+
 }
+.text-position{
+  text-align: center;
 
-
+}

@@ -14,7 +14,28 @@
         background-attachment: fixed; /* Optional: Keeps the background fixed during scroll */
       
   }
- 
+  .hero-content-services h1 {
+    display: inline; /* Only takes up as much space as necessary */
+    font-size: 4vw;
+    line-height: 1;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgba(1, 31, 61, 0.7);
+    padding: 0.1em 0.3em; /* Adjust padding to create some space around the text */
+    border-radius: 20px;
+  }
+
+  .hero-content-services p {
+    font-size: 1.5vw;
+    line-height: 1.4;
+    margin: 10px 0; /* Space above and below paragraph */
+    padding: 0.1em 0.3em; /* Adjust padding to create some space around the text */
+    color: #ffffff; /* White color for the text */
+    background-color: rgba(1, 31, 61, 0.7); /* Your desired color with opacity */
+    border-radius: 10px; /* Rounded corners */
+    display: inline-block; /* Allows the background to wrap the content */
+  }
+  
 
 
 
@@ -106,7 +127,7 @@
   
   .services-btn-learn-more,
   .services-btn-sign-up {
-    background-color: #007bff;
+    background-color: #000000;
     color: white;
     text-decoration: none;
     padding: 10px 20px;
@@ -114,6 +135,7 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom: 40px;
     
   }
   
@@ -310,24 +332,26 @@
             max-width: 800px; /* Set a max width to match the title */
             /* Your additional styles for paragraph */
           }
-     
           .support-button {
-            padding: 10px 15px; /* Adds padding around the text */
-            font-size: 16px; /* Sets the size of the font */
-            background-color: #007bff; /* The button's background color */
-            color: white; /* The color of the text on the button */
-            text-decoration: none; /* Removes the underline from the text */
-            border-radius: 4px; /* Rounds the corners of the button */
-            display: inline-block; /* Makes the element inline-block so it only takes up as much space as it needs */
-            cursor: pointer; /* Changes the cursor to indicate it's clickable */
-            transition: all 0.3s ease-in-out; /* Smooth transition for visual effects */
+            padding: 8px 16px; /* Smaller padding for a smaller button */
+            font-size: 0.5rem; /* Smaller font size */
+            background-color: #000; /* Black background color */
+            color: #fff; /* White text color */
+            text-decoration: none; /* Removes underline from the link */
+            border-radius: 4px; /* Rounded corners */
+            border: 1px solid #000; /* Black border to maintain size on hover */
+            display: inline-block; /* Allows for padding and margin adjustments */
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+            text-align: center; /* Center the text inside the button */
           }
           
-          /* Adjusts the hover state of the button for user feedback */
           .support-button:hover {
-            background-color: #0056b3; /* Darkens the button on hover */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+            background-color: #333; /* Darker grey background on hover for a subtle effect */
+            color: #ddd; /* Slightly lighter text on hover */
+            text-decoration: none; /* Ensure there's no underline on hover */
+            border-color: #222; /* Dark grey border on hover for a subtle effect */
           }
+          
           
           /* You can also add media queries if you want to adjust the size specifically for mobile or tablet views */
     
@@ -354,14 +378,14 @@
       }
       
       .value-platform-content h2 {
-        font-size: 3.5em;
+        font-size: 2em;
         margin-bottom: 0.25em; /* Adjusted for closer spacing */
         font-family: 'Sulphur Point', sans-serif;
 
       }
       
       .value-platform-content p {
-        font-size: 2em;
+        font-size: 1.5em;
         margin-bottom: 1em;
         font-family: 'Sulphur Point', sans-serif;
 
@@ -372,11 +396,10 @@
         width: fit-content; /* Fit the width as per content */
         margin: 0 auto; /* Center the link */
         font-weight: bold;
-        color: #0000EE; /* Change as needed */
+        color: #030303; /* Change as needed */
         text-decoration: none;
         position: relative; /* Relative positioning for pseudo-element */
         padding-bottom: 10px; /* Space for the line */
-        font-family: 'Sulphur Point', sans-serif;
 
       }
       
@@ -526,7 +549,7 @@
     margin-right: 8px;
   }
   .plan-btn {
-    background-color: #007bff;
+    background-color: #000000;
     color: white;
     padding: 12px 20px; /* Increase padding for better touch targets on mobile */
     border-radius: 5px;
@@ -576,73 +599,8 @@
   /* if you need to restrict the height of the image, you can also use max-height */
 }
           
-          .contact-section {
-            display: flex;
-            justify-content: space-between; /* Space between the text and image */
-            align-items: center; /* Vertical alignment */
-            padding: 40px;
-            max-width: 1000px; /* Adjust based on your layout width */
-            margin: auto; /* Centering the container */
-            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
-          
-          }
-          
-          .contact-details {
-            width: 50%; /* Allocate width to the text section */
-            padding-right: 20px; /* Space between the text and the image */
-          }
-          
-          .contact-image {
-            width: 50%; /* Allocate width to the image section */
-            text-align: center; /* Center the image if smaller than the allocated width */
-          }
-          
-          .contact-header {
-            font-size: 2.5rem; /* Adjust the font size of the header */
-            margin-bottom: 0.5rem; /* Reduce space below the header */
-            color: #333; /* Dark color for the header for better contrast */
-          }
-          
-          .contact-text {
-            font-size: 1rem; /* Standard font size for contact details */
-            color: #555; /* Dark grey color for contact text */
-            line-height: 1.5; /* Space between lines */
-            font-family: 'Sulphur Point', sans-serif;
-          
-          }
-          
-          .contact-details a {
-            color: #007bff; /* Link color */
-            text-decoration: none; /* Remove underline from links */
-          }
-          
-          .contact-details a:hover {
-            text-decoration: underline; /* Add underline on hover for links */
-          }
-          
-          /* Image styles */
-          .contact-image img {
-            max-width: 100%; /* Make image responsive */
-            height: auto; /* Maintain aspect ratio */
-          }
+
           
           
           
-          
-          
-          
-          
-          /* Footer CSS */
-          footer {
-            background-color: #0a0a0a; /* Example background color */
-            color: white;
-            text-align: center;
-            padding: 10px;
-            width: 100%; /* Footer should take full width */
-          }
-          
-          /* Ensure no other styles are interfering with footer positioning */
-          footer p {
-            margin: 0; /* Remove margin to prevent unnecessary spacing */
-          }
           

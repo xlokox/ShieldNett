@@ -22,127 +22,145 @@
   }
   
   
-
+  .top-bar {
+    width: 100%; /* Full width to extend the full viewport width */
+    max-width: 1080px; /* Max width set to 1080px */
+    margin: 0 auto; /* Centers the navigation bar */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Distribute space between logo and navigation items */
+    align-items: center; /* Align items vertically in the center */
+    padding: 0 20px; /* Padding on the sides */
+    /* Add other styles like background color, height, etc., as needed */
+    border-radius: 20px;
+  }
+  
+  .logo-container .logo {
+    font-size: 30px; /* Adjust the size as needed */
+    color: white; /* Adjust color as needed */
+    text-decoration: none; /* Remove underline from links if necessary */
+    /* Additional styling for the logo */
+  }
+  
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000; /* Add a background color to the nav bar for visibility */
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Add some padding inside the nav bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
+  }
+  
+  
+  .logo-container .logo {
+    font-size: 30px; /* Adjust the size as needed */
+    color: white; /* Adjust color as needed */
+    text-decoration: none; /* Remove underline from links if necessary */
+    /* Additional styling for the logo */
+  }
+  
+  .top-nav .nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Adjust the gap between the navigation items */
+  }
+  .hamburger-menu {
+    display: none; /* Hide hamburger by default */
+    width: auto;
+  }
+  
+  
+  .top-nav .nav-list li a {
+    color: white; /* Adjust link color as needed */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Adjust padding for clickable area */
+    /* Additional styling for links */
+  }
+  
+  
+  /* Navigation link hover effect */
+  .top-nav .nav-list li a:hover {
+    background-color: #333; /* Change background on hover */
+    border-radius: 4px; /* Optional: round corners on hover */
+  }
+  
+  /* Hides the default checkbox visually */
+  .menu-toggle {
+  display: none;
+  }
+  
+  /* Hide hamburger menu on desktop */
+  @media (max-width: 768px) {
+    /* Other styles remain the same */
+  
+    /* Correct placement of the hamburger menu */
+    .hamburger-menu {
+      margin-left: auto;
+    }
+  
+    /* Other styles remain the same */
+  }
+  
+  /* Mobile specific styles */
+  @media (max-width: 768px) {
+    /* Hide the navigation list by default */
+    .top-nav .nav-list {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 60px; /* This value may need adjustment */
+      left: 0;
+      background: #000;
+    }
+  
+    /* Styles for the hamburger menu */
+    .hamburger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      cursor: pointer;
+    }
+  
+    /* Style for the bars of the hamburger menu */
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+  
+    /* When the checkbox is checked, change the appearance of the hamburger to a 'cross' and show the nav list */
+    #menu-toggle:checked + .hamburger-menu .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    #menu-toggle:checked + .hamburger-menu .bar:nth-child(2) {
+      opacity: 0;
+    }
+    #menu-toggle:checked + .hamburger-menu .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+    #menu-toggle:checked ~ .top-nav .nav-list {
+      display: flex;
+    }
+  }
   
   /* Position the .top-bar at the very top */
   /* Position the .top-bar at the very top with no padding at the top */
   /* Position the .top-bar at the very top */
 /* Base styles */
 /* Base styles for the top bar */
-.top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #000; /* Add a background color to the nav bar for visibility */
-  color: white;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px; /* Add some padding inside the nav bar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation from the content */
-}
 
-
-.logo-container .logo {
-  font-size: 30px; /* Adjust the size as needed */
-  color: white; /* Adjust color as needed */
-  text-decoration: none; /* Remove underline from links if necessary */
-  /* Additional styling for the logo */
-}
-
-.top-nav .nav-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 20px; /* Adjust the gap between the navigation items */
-}
-.hamburger-menu {
-  display: none; /* Hide hamburger by default */
-  width: auto;
-}
-
-
-.top-nav .nav-list li a {
-  color: white; /* Adjust link color as needed */
-  text-decoration: none; /* Remove underline from links */
-  padding: 5px 10px; /* Adjust padding for clickable area */
-  /* Additional styling for links */
-}
-
-
-/* Navigation link hover effect */
-.top-nav .nav-list li a:hover {
-  background-color: #333; /* Change background on hover */
-  border-radius: 4px; /* Optional: round corners on hover */
-}
-
-/* Hides the default checkbox visually */
-.menu-toggle {
-display: none;
-}
-
-/* Hide hamburger menu on desktop */
-@media (max-width: 768px) {
-  /* Other styles remain the same */
-
-  /* Correct placement of the hamburger menu */
-  .hamburger-menu {
-    display: ;
-    margin-left: auto;
-  }
-
-  /* Other styles remain the same */
-}
-
-/* Mobile specific styles */
-@media (max-width: 768px) {
-  /* Hide the navigation list by default */
-  .top-nav .nav-list {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: absolute;
-    top: 60px; /* This value may need adjustment */
-    left: 0;
-    background: #000;
-  }
-
-  /* Styles for the hamburger menu */
-  .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    cursor: pointer;
-  }
-
-  /* Style for the bars of the hamburger menu */
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #fff;
-    transition: all 0.3s ease;
-  }
-
-  /* When the checkbox is checked, change the appearance of the hamburger to a 'cross' and show the nav list */
-  #menu-toggle:checked + .hamburger-menu .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  #menu-toggle:checked + .hamburger-menu .bar:nth-child(2) {
-    opacity: 0;
-  }
-  #menu-toggle:checked + .hamburger-menu .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  #menu-toggle:checked ~ .top-nav .nav-list {
-    display: flex;
-  }
-}
 
   .enterprise-section {
     max-width: 600px; /* Maximum width of the section */
@@ -303,30 +321,118 @@ display: none;
 
 
 
+  .contact-form {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Sulphur Point', sans-serif;
 
-  /* Base footer styles */
-.sn-footer {
-    background-color: #0a0a0a; /* Dark background for footer */
-    color: white;
-    text-align: center;
-    padding: 10px;
+  }
+  
+  .input-group,
+  .radio-group,
+  .checkbox-group,
+  .button-group {
+    margin-bottom: 15px;
+        font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+  .input-group input,
+  .input-group textarea,
+  .input-group select {
+    width: 48%; /* Adjust width for mobile responsiveness */
+    margin-right: 4%; /* Space between inline items */
+    margin-bottom: 10px;
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  
+  .input-group input:last-child,
+  .input-group textarea:last-child,
+  .input-group select:last-child {
+    margin-right: 0;
+  }
+  
+  .input-group textarea {
     width: 100%;
+    height: 150px; /* Adjust height as necessary */
   }
   
-  /* Text styling within the footer */
-  .sn-footer-text {
-    margin: 0; /* Remove margin to prevent extra space */
-    font-family: 'Sulphur Point', sans-serif; /* Assuming 'Sulphur Point' is a font you have included */
+  .button-group button {
+    width: 100%;
+    padding: 10px;
   }
   
-  /* Link styling within the footer */
-  .sn-footer-link {
-    color: #ffffff; /* Set the color for the link, if needed */
-    text-decoration: none; /* Option to remove underline from link */
+  /* Responsive Styles */
+
+  /* Footer CSS */
+  .contact-section {
+    display: flex;
+    justify-content: space-between; /* Space between the text and image */
+    align-items: center; /* Vertical alignment */
+    padding: 40px;
+    max-width: 1000px; /* Adjust based on your layout width */
+    margin: auto; /* Centering the container */
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    font-family: 'Sulphur Point', sans-serif;
+  
   }
   
-  /* Link hover effect, if desired */
-  .sn-footer-link:hover {
-    text-decoration: underline; /* Re-add underline on hover, if desired */
+  .contact-details {
+    width: 50%; /* Allocate width to the text section */
+    padding-right: 20px; /* Space between the text and the image */
+  }
+  
+  .contact-image {
+    width: 50%; /* Allocate width to the image section */
+    text-align: center; /* Center the image if smaller than the allocated width */
+  }
+  
+  .contact-header {
+    font-size: 2.5rem; /* Adjust the font size of the header */
+    margin-bottom: 0.5rem; /* Reduce space below the header */
+    color: #ffffff; /* Dark color for the header for better contrast */
+  }
+  
+  .contact-text {
+    font-size: 1rem; /* Standard font size for contact details */
+    color: #fff5f5; /* Dark grey color for contact text */
+    line-height: 1.5; /* Space between lines */
+  
+  }
+  
+  .contact-details a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .contact-details a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+  }
+  
+  /* Image styles */
+  .contact-image img {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  footer {
+    background-color: #0a0a0a; /* Example background color */
+    color: white;
+    text-align: left;
+    padding: 10px;
+    width: 100%; /* Footer should take full width */
+  }
+  
+  /* Ensure no other styles are interfering with footer positioning */
+  footer p {
+    margin: 0; /* Remove margin to prevent unnecessary spacing */
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  .text-position{
+    text-align: center;
+
   }
   

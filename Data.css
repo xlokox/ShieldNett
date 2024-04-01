@@ -24,150 +24,6 @@
   
   
   /* Position the .top-bar at the very top */
-
-
-/* Styles the label to look like a hamburger menu */
-/* Desktop styles */
-
-
-  /* Data Protection Section */
-  .data-protection-section {
-    text-align: left;
-    max-width: 600px; /* Adjust the max-width as necessary */
-    margin: 0 auto; /* This will center your content */
-  }
-  
-  .data-protection-section h2 {
-    font-size: 1rem; /* Adjust the size as necessary */
-    color: #666; /* Light grey color, adjust as necessary */
-  }
-  
-  .data-protection-section h1 {
-    font-size: 3.1rem; /* Adjust the size as necessary */
-    color: #333; /* Darker text color */
-    margin: 1rem 0; /* Space between h1 and h2 */
-  }
-  
-  .data-protection-section p {
-    font-size: 1rem; /* Adjust the size as necessary */
-    color: #666; /* Light grey color, adjust as necessary */
-    margin-bottom: 8rem; /* Space after the paragraph */
-  }
-    /* EnterPrise Section */
-
-  /* testamonial Section */
-
-  .data-section {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .data-section h2 {
-    margin-bottom: 1.5em;
-  }
-  
-  .data-section p {
-    margin-bottom: 1em;
-  }
-  
-  .testimonials {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .testimonial-item {
-    width: 30%; /* Adjust based on your layout */
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .testimonial-item img {
-    width: 100%; /* Adjust based on your layout */
-    height: auto;
-    margin-bottom: 0.5em;
-    border-radius: 20px;
-  }
- /* end of testamonial Section */  
- .reduction-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-  }
-  
-  .reduction-section {
-    text-align: center; /* Centers text */
-    background-color: #f7f5f5;
-    margin-top: 100px;
-    margin-bottom: 50px;
-  }
-  
-  .reduction-content h1 {
-    font-size: 2em; /* Large font size for primary heading */
-    font-weight: bold;
-    margin-bottom: 0.5em;
-  }
-  
-  .reduction-content h2 {
-    font-size: 1.5em; /* Smaller font size for secondary heading */
-    font-weight: normal;
-    margin-bottom: 1em;
-    text-align: center;
-
-  }
-  
-  .reduction-content p {
-    font-size: 1em;
-    margin-bottom: 2em;
-    text-align: center;
-
-  }
-  
-
-  .reduction-offers {
-    display: flex;
-    justify-content: center; /* Centers flex items on the line */
-    gap: 20px; /* Spacing between flex items */
-  }
-  
-  .offer {
-    width: calc(50% - 10px); /* Adjust width taking into account the gap */
-  }
-  
-  .offer h3 {
-    margin-bottom: 0.25em;
-  }
-  
-  .offer p {
-    margin: 0;
-  }
-  
-  /* Add any additional styling as needed */
-  .sn-footer {
-    background-color: #0a0a0a; /* Dark background for footer */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-  }
-  
-  /* Text styling within the footer */
-  .sn-footer-text {
-    margin: 0; /* Remove margin to prevent extra space */
-    font-family: 'Sulphur Point', sans-serif; /* Assuming 'Sulphur Point' is a font you have included */
-  }
-  
-  /* Link styling within the footer */
-  .sn-footer-link {
-    color: #ffffff; /* Set the color for the link, if needed */
-    text-decoration: none; /* Option to remove underline from link */
-  }
-  
-  /* Link hover effect, if desired */
-  .sn-footer-link:hover {
-    text-decoration: underline; /* Re-add underline on hover, if desired */
-  }
   .top-bar {
     width: 100%; /* Full width to extend the full viewport width */
     max-width: 1080px; /* Max width set to 1080px */
@@ -248,7 +104,6 @@
   
     /* Correct placement of the hamburger menu */
     .hamburger-menu {
-      display: ;
       margin-left: auto;
     }
   
@@ -300,5 +155,219 @@
     #menu-toggle:checked ~ .top-nav .nav-list {
       display: flex;
     }
+  }
+
+/* Styles the label to look like a hamburger menu */
+/* Desktop styles */
+
+
+  /* Data Protection Section */
+  .data-protection-section {
+    text-align: left;
+    max-width: 600px; /* Adjust the max-width as necessary */
+    margin: 0 auto; /* This will center your content */
+  }
+  
+  .data-protection-section h2 {
+    font-size: 1rem; /* Adjust the size as necessary */
+    color: #666; /* Light grey color, adjust as necessary */
+  }
+  
+  .data-protection-section h1 {
+    font-size: 3.1rem; /* Adjust the size as necessary */
+    color: #333; /* Darker text color */
+    margin: 1rem 0; /* Space between h1 and h2 */
+  }
+  
+  .data-protection-section p {
+    font-size: 1rem; /* Adjust the size as necessary */
+    color: #666; /* Light grey color, adjust as necessary */
+    margin-bottom: 8rem; /* Space after the paragraph */
+  }
+    /* EnterPrise Section */
+
+  /* testamonial Section */
+  .data-section {
+    max-width: 1080px;
+    margin: 0 auto; /* Center the section */
+    padding: 0 20px; /* Add some padding for inner spacing */
+    box-sizing: border-box; /* Padding included in width */
+    text-align: center;
+  }
+  
+  .data-section h2 {
+    text-align: left;
+    margin-bottom: 0.5em;
+    font-size: 25px;;
+    
+  }
+  
+  .data-section p {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 0.9em;
+  }
+  
+  .testimonials {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .testimonial-item {
+    width: 30%; /* Adjust based on your layout */
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .testimonial-item img {
+    width: 100%; /* Adjust based on your layout */
+    height: auto;
+    margin-bottom: 0.5em;
+    border-radius: 20px;
+  }
+ /* end of testamonial Section */  
+ .reduction-section {
+  max-width: 1080px;
+  margin: 0 auto; /* Center the section */
+  padding: 0 20px; /* Add some padding for inner spacing */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+  
+  .reduction-section {
+    text-align: center; /* Centers text */
+    background-color: #f7f5f5;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  
+  .reduction-content h1,
+  .reduction-content h2 {
+    font-size: 25px; /* Adjust the font size */
+    margin-bottom: 5px; /* Add some space below the headings */
+  }
+  
+  .reduction-content p {
+    font-size: 16px; /* Comfortable reading size for paragraph text */
+    line-height: 1.6; /* Good line height for readability */
+    margin-bottom: 20px; /* Space below the paragraph */
+  }
+  
+  .reduction-offers {
+    display: flex;
+    justify-content: space-between; /* Space out the offers */
+    gap: 20px; /* Space between the offers */
+  }
+  .offer {
+    background-color: #f0f0f0; /* A light background for the offer boxes */
+    padding: 15px; /* Padding inside the boxes */
+    border-radius: 5px; /* Rounded corners for the boxes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+  }
+  
+  .offer h3 {
+    font-size: 22px; /* Font size for the discount offer */
+    color: #d9534f; /* A standout color for the discount percentage */
+    margin-bottom: 10px; /* Space below the discount percentage */
+  }
+  
+  .offer p {
+    font-size: 14px; /* Adjust the size for offer details */
+    line-height: 1.4; /* Line height for readability */
+  }
+  
+  /* Add any additional styling as needed */
+  .sn-footer {
+    background-color: #0a0a0a; /* Dark background for footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  /* Text styling within the footer */
+  .sn-footer-text {
+    margin: 0; /* Remove margin to prevent extra space */
+    font-family: 'Sulphur Point', sans-serif; /* Assuming 'Sulphur Point' is a font you have included */
+  }
+  
+  /* Link styling within the footer */
+  .sn-footer-link {
+    color: #ffffff; /* Set the color for the link, if needed */
+    text-decoration: none; /* Option to remove underline from link */
+  }
+  
+  /* Link hover effect, if desired */
+  .sn-footer-link:hover {
+    text-decoration: underline; /* Re-add underline on hover, if desired */
+  }
+
+.contact-section {
+    display: flex;
+    justify-content: space-between; /* Space between the text and image */
+    align-items: center; /* Vertical alignment */
+    padding: 40px;
+    max-width: 1000px; /* Adjust based on your layout width */
+    margin: auto; /* Centering the container */
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    font-family: 'Sulphur Point', sans-serif;
+    
+  
+  }
+  
+  .contact-details {
+    width: 50%; /* Allocate width to the text section */
+    padding-right: 20px; /* Space between the text and the image */
+  }
+  
+  .contact-image {
+    width: 50%; /* Allocate width to the image section */
+    text-align: center; /* Center the image if smaller than the allocated width */
+  }
+  
+  .contact-header {
+    font-size: 2.5rem; /* Adjust the font size of the header */
+    margin-bottom: 0.5rem; /* Reduce space below the header */
+    color: #000000; /* Dark color for the header for better contrast */
+  }
+  
+  .contact-text {
+    font-size: 1rem; /* Standard font size for contact details */
+    color: #000000; /* Dark grey color for contact text */
+    line-height: 1.5; /* Space between lines */
+text-align: left;  
+  }
+  
+  .contact-details a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .contact-details a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+  }
+  
+  /* Image styles */
+  .contact-image img {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+footer {
+    background-color: #0a0a0a; /* Example background color */
+    color: white;
+    text-align: left;
+    padding: 10px;
+    width: 100%; /* Footer should take full width */
+  }
+  
+  /* Ensure no other styles are interfering with footer positioning */
+  footer p {
+    margin: 0; /* Remove margin to prevent unnecessary spacing */
+    font-family: 'Sulphur Point', sans-serif;
+
+  }
+  .text-position{
+    text-align: center;
+
   }
   

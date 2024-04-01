@@ -14,6 +14,22 @@
       background-attachment: fixed; /* Optional: Keeps the background fixed during scroll */
   
 }
+
+
+.hero-content-about h1 {
+  
+  display: inline; /* Only takes up as much space as necessary */
+  font-size: 4vw;
+  line-height: 1;
+  margin: 0;
+  color: #000000;
+  padding: 0.05em 0.6em; /* Adjust padding to create some space around the text */
+  border-radius: 20px;
+
+}
+
+
+
   
   .about-section {
   max-width: 800px; /* Adjust as needed for your design */
@@ -43,16 +59,16 @@
 
 /* Main Section Starts Here */
 .main-section {
+  max-width: 1080px;
+  margin: 0 auto; /* Center the section */
   display: flex;
-  flex-direction: column-reverse; /* Image first, content second for mobile */
-  align-items: center; /* Center-align the content */
-  padding: 20px; /* Add some padding */
+  flex-direction: column; /* Stack the content and image vertically */
+  align-items: center; /* Align children to the center horizontally */
 }
 
-
 .main-section-content {
-  text-align: center; /* Center the text content */
-  padding: 20px; /* Add some padding around the text */
+  width: 100%; /* Use the full width of the .main-section */
+  /* Add padding or text alignment styles as needed */
 }
 
 .main-section h1 {
@@ -65,16 +81,16 @@
   color: #666;
   line-height: 1.5;
 }
+.image-placeholder {
+  width: 100%; /* Match the width of the .main-section-content */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  margin-top: 50px; /* Set to '0' to place the image at the top */
+}
 
 .image-placeholder img {
-  width: 80%; /* Take up 80% of the container width */
-  max-width: 400px; /* Max width to not be too big */
-  height: auto; /* Keep the aspect ratio */
-  margin-top: 20px; /* Add space above the image */
-}
-.image-placeholder {
-  width: 100%; /* Full width */
-  text-align: center; /* Center the image */
+  max-width: 100%; /* Ensure the image is responsive and does not exceed its container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* If you add an actual image, you can replace .image-placeholder with the class or ID of your image container */
@@ -117,121 +133,51 @@
 .team-section {
   text-align: center;
   padding: 20px;
-  font-family: 'Sulphur Point', sans-serif;
-
-  background-color: #f8f8f8; /* Change this color to match your site's design */
+  background-color: #f8f8f8; /* Light grey background */
 }
 
 .team-section h2 {
   font-family: 'Sulphur Point', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #333; /* Or any color you prefer */
-
+  color: #333;
 }
 
 .team-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  max-width: 1080px; /* Max width set to 1080px */
+  margin: 0 auto; /* This will center your container */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between team members */
 }
 
 .team-member {
-  flex-basis: calc(25% - 20px);
   text-align: center;
   padding: 20px;
-  background-color: white; /* or any color you want for the card background */
-  border: 1px solid #ddd; /* Change color as needed */
-  border-radius: 10px; /* rounded corners */
-      font-family: 'Sulphur Point', sans-serif;
-
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
 .team-member img {
   width: 100%;
   height: auto;
-  border-radius: 50%; /* Creates a round image. Adjust as needed */
+  border-radius: 50%; /* Creates a round image */
   border: 3px solid #ddd; /* Optional border for images */
   margin-bottom: 20px;
 }
 
 .team-member h3 {
-  margin-top: 0;
   margin-bottom: 5px;
-  font-family: 'Sulphur Point', sans-serif;
-
   font-size: 1.2rem;
-  color: #333; /* Adjust the color as needed */
+  color: #333;
 }
-
 
 .team-member p {
-  margin-top: 0;
-  font-family: 'Sulphur Point', sans-serif;
-
   color: #666;
 }
-.contact-section {
-  display: flex;
-  justify-content: space-between; /* Space between the text and image */
-  align-items: center; /* Vertical alignment */
-  padding: 40px;
-  max-width: 1100px; /* Adjust based on your layout width */
-  margin: auto; /* Centering the container */
-  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
-  font-family: 'Sulphur Point', sans-serif;
-  
-
-}
-
-.contact-details {
-  width: 50%; /* Allocate width to the text section */
-  padding-right: 20px; /* Space between the text and the image */
-}
-
-.contact-image {
-  width: 50%; /* Allocate width to the image section */
-  text-align: center; /* Center the image if smaller than the allocated width */
-  
-}
-
-.contact-header {
-  font-size: 2.5rem; /* Adjust the font size of the header */
-  margin-bottom: 0.5rem; /* Reduce space below the header */
-  color: #333; /* Dark color for the header for better contrast */
-}
-
-.contact-text {
-  font-size: 1rem; /* Standard font size for contact details */
-  color: #555; /* Dark grey color for contact text */
-  line-height: 1.5; /* Space between lines */
-  font-family: 'Sulphur Point', sans-serif;
-
-}
-
-.contact-details a {
-  color: #007bff; /* Link color */
-  text-decoration: none; /* Remove underline from links */
-}
-
-.contact-details a:hover {
-  text-decoration: underline; /* Add underline on hover for links */
-}
 
 
-
-/* Handling responsiveness */
-@media (max-width: 768px) {
-  .contact-details,
-  .contact-image {
-    width: 100%; /* Full width on smaller screens */
-  }
-
-  .contact-section {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
-  }
-}
 
 
 /* Responsive layout adjustments */

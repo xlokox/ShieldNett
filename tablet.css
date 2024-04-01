@@ -59,19 +59,6 @@
   }
 }
 
-/* Ensure the image placeholder displays an image */
-.mobile-end-device-image-placeholder {
-  background: url('/photos/application.webp') no-repeat center center; /* Replace with your image path */
-  background-size: cover; /* Cover the entire area of the div */
-}
-
-/* Ensure the support button stands out */
-.support-button {
-  background-color: #007bff; /* Use your primary color */
-  color: white; /* Use a color that stands out */
-  text-decoration: none; /* Remove underline */
-  border-radius: 5px; /* Rounded corners for the button */
-}
 
 
 /* Tablet CSS comprenshive section */
