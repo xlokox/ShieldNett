@@ -1,56 +1,90 @@
-body {
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-    font-family: 'Sulphur Point', sans-serif;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Border-box model */
   }
   
-
-.form-container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  
+  body {
+  
+    flex-direction: column;
+    font-family: 'Sulphur Point', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  
+  }
+  
+.container {
+    display: flex;
+    max-width: 1080px;
+    margin: auto;
 }
 
-.login-form,
-.register-form {
+.image-placeholder {
+    /* Replace with your actual image path */
+    background-image: url('/photos/RegisterForm.webp');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+
+.register-form-container {
+    flex: 1;
+    padding: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+.form-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-button {
-    padding: 10px;
+.register-button {
+    background-color: #000000; /* Adjust to match your design */
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #5c67ed;
-    color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #4a52d1;
+.register-button:hover {
+    background-color: #424242; /* Darker orange on hover */
 }
 
-a {
-    color: #5c67ed;
-    text-decoration: none;
-}
+@media (max-width: 860px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
 
-a:hover {
-    text-decoration: underline;
-}
+    .image-placeholder {
+        width: 100%;
+        padding-top: 50%; /* 1:1 Aspect Ratio */
+    }
 
-h2 {
-    text-align: center;
+    .register-form-container {
+        width: 100%;
+    }
 }
