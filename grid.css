@@ -395,86 +395,102 @@ display: none;
 
 
 
-/* Pricing Section*/ 
-.pricing-options {
+.pl-pricing-options {
   max-width: 1080px;
-  margin: 0 auto; /* Center the pricing section */
-  text-align: center;
-  padding: 20px;
+  margin: 0 auto; /* Center the pricing options in the middle of the page */
 }
 
-.pricing-title {
-  font-family: 'Sulphur Point', sans-serif; /* Assuming you have this font loaded */
-}
-
-.best-price {
-  display: block;
-  font-size: 0.9em; /* Smaller font size for the 'Best Price' tag */
-  font-weight: bold; /* Make it bold */
-  color: #FFD700; /* Gold color for the 'Best Price' tag to make it stand out */
-  background-color: #333; /* Dark background for the tag */
-  padding: 5px 10px; /* Padding around the text */
-  border-radius: 5px; /* Rounded corners for the tag */
-  position: absolute; /* Position it relative to the parent */
-  top: -10px; /* Position it above the plan box */
-  left: 10px; /* Position it from the left side of the plan box */
-  transform: translate(0, -100%); /* Ensure it's above the plan box */
-  z-index: 10; /* Make sure it's above other items */
-}
-.plans {
+.pl-plans-container {
   display: flex;
-  justify-content: space-around; /* Distribute space between plans */
-  flex-wrap: wrap; /* Wrap onto the next line if space is not enough */
+  justify-content: space-around; /* Space out the plans equally */
+  flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
+  gap: 20px; /* Space between each plan */
 }
 
-.plan {
-  background-color: #f9f9f9; /* Light background for each plan */
-  border: 1px solid #ddd; /* Border for the plan */
+.pl-plan {
+  border: 1px solid #ccc;
   padding: 20px;
-  margin: 10px;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-  width: calc(33.333% - 20px); /* Three items per row minus margin */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow */
+  width: calc(33.333% - 20px); /* Width for 3 items minus the gap */
+  text-align: left; /* Align text to the left */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+
+}
+
+.pl-plan ul {
+  padding: 0;
+  list-style: none;
+}
+
+.pl-plan li {
   display: flex;
-  flex-direction: column; /* Stack the content vertically */
-  justify-content: space-between; /* Distribute space */
+  align-items: center;
+  margin-bottom: 10px; /* Add some space between the list items */
 }
 
-.plan-title {
-  font-size: 24px; /* Size of the plan title */
-  margin-bottom: 10px; /* Space below the title */
+.pl-plan li .pl-feature-icon {
+  margin-right: 10px; /* Adjust the space between the icon and the text */
+  color: #000; /* Adjust color as needed */
+  font-weight: bold; /* Make the checkmark bold */
 }
 
-.price {
-  font-size: 30px; /* Size of the price */
-  font-weight: bold;
-  margin-bottom: 20px; /* Space below the price */
+.pl-popular-badge {
+  position: absolute;
+  top: -20px;
+  right: 100px; /* Adjust the position to the top-right corner of the plan */
+  background-color: #000000; /* Gold color for the popular badge */
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 0.8em;
+  padding: 5px 10px;
 }
 
-.plan-features {
-  list-style: none; /* Remove list bullets */
-  padding: 0; /* Remove default padding */
-  margin: 0 0 20px; /* Space below the features list */
+.pl-plan-btn {
+  background-color: #000000; /* Adjust button color as needed */
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block; /* Align the button to the text */
+  margin-top: 15px;
 }
 
-.plan-features li {
-  margin-bottom: 10px; /* Space between list items */
+/* Styles for most popular plan */
+.pl-advanced-plan {
+  position: relative;
+  background-color: #f8f8f8; /* A light background color to highlight the plan */
+}
+.pl-plan:hover {
+  transform: translateY(-5px); /* Move the plan up by 5 pixels on hover */
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1199px) {
+  .pl-plan {
+    width: calc(50% - 20px); /* Two items per row on smaller desktop */
+  }
 }
 
-.plan-btn {
-  background-color: #000000; /* Button background color */
-  color: #fff; /* Button text color */
-  text-decoration: none; /* Remove underline */
-  padding: 10px 20px; /* Padding inside the button */
-  border-radius: 5px; /* Rounded corners for the button */
-  border: none; /* No border */
-  cursor: pointer; /* Pointer cursor on hover */
+@media (max-width: 768px) {
+  .pl-plans-container {
+    flex-direction: column;
+  }
+  .pl-plan {
+    width: 100%; /* Full width on small screens */
+    max-width: 500px; /* Maximum width of the plan */
+    margin-bottom: 20px; /* Space between stacked plans */
+  }
+  .pl-popular-badge {
+    position: absolute;
+    top: -20px;
+    right: 120px; /* Adjust the position to the top-right corner of the plan */
+    background-color: #000000; /* Gold color for the popular badge */
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 0.8em;
+    padding: 5px 10px;
+  }
 }
-
-.plan-btn:hover {
-  background-color: #0056b3; /* Button hover color */
-}
-
 
 
 /* If there are no unique styles needed, the .get-started-basic and .get-started-advanced classes can be omitted, and just .plan-btn can be used */

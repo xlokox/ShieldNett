@@ -1,4 +1,31 @@
- 
+.hero-content-tnx h1 {
+  
+    display: inline; /* Only takes up as much space as necessary */
+    font-size: 4vw;
+    line-height: 1;
+    margin: 0;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.05em 0.6em; /* Adjust padding to create some space around the text */
+    border-radius: 20px;
+  
+  }
+  
+  
+
+  
+  
+   .hero-content-tnx p {
+    font-size: 1.5vw;
+    line-height: 1.4;
+    margin: 10px 0; /* Space above and below paragraph */
+    padding: 0.1em 0.3em; /* Adjust padding to create some space around the text */
+    color: #ffffff; /* White color for the text */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+
  .submission-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -50,11 +77,12 @@
 }
 
 .button {
-    background-color: #4CAF50;
+    background-color: #000000;
     color: white;
     text-decoration: none;
     padding: 10px 20px;
     text-align: center;
+    border-radius: 5px;
 }
 
 
