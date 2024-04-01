@@ -112,6 +112,7 @@
     line-height: 1.2; /* Adjust the line height for better readability */
     margin-bottom: 20px; /* Space after the title */
     color: #333; /* Adjust the color as needed */
+    margin-top: 70px;
   }
   
   
@@ -144,8 +145,8 @@
   .services-btn-sign-up:hover {
     background-color: #0056b3;
   }
-  .services-content,
   .services-image-placeholder {
+    margin-top:75px;
     display: flex;
     flex-direction: column; /* Stack children vertically */
     justify-content: space-between; /* Distribute space between items */

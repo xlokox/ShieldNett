@@ -123,10 +123,11 @@
       .mobile-end-device-image-placeholder,
       .support-content .support-button {
         width: 100%; /* Take the full width of the container */
-        margin-top: 20px; /* Add space above the image/button */
+        margin-top: 10px; /* Add space above the image/button */
         order: 2; /* Image/button will be displayed after the text on mobile */
       }
     
+
       .services-content {
         width: 100%; /* Full width */
         padding: 20px; /* Consistent padding */
@@ -168,7 +169,7 @@
     
       .services-btn-learn-more:hover,
       .services-btn-sign-up:hover {
-        background-color: #000dff; /* Slightly darker on hover for feedback */
+        background-color: #000000; /* Slightly darker on hover for feedback */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
       }
     }
