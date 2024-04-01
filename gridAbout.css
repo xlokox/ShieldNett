@@ -82,7 +82,7 @@
   line-height: 1.5;
 }
 .image-placeholder {
-  width: 100%; /* Match the width of the .main-section-content */
+  width: 1040px; /* Match the width of the .main-section-content */
   display: flex;
   justify-content: center; /* Center the image horizontally */
   margin-top: 50px; /* Set to '0' to place the image at the top */
@@ -90,7 +90,8 @@
 
 .image-placeholder img {
   max-width: 100%; /* Ensure the image is responsive and does not exceed its container */
-  height: auto; /* Maintain aspect ratio */
+  height: 400px; /* Maintain aspect ratio */
+  border-radius: 200px;
 }
 
 /* If you add an actual image, you can replace .image-placeholder with the class or ID of your image container */
@@ -98,7 +99,7 @@
   background-color: #f4f4f4; /* Adjust the background color as needed */
   padding: 40px;
   border-radius: 8px; /* Rounded corners for the container */
-  max-width: 1000px; /* Adjust the width as needed */
+  max-width: 1080px; /* Adjust the width as needed */
   margin: 40px auto; /* Centering the container */
 }
 
