@@ -1,23 +1,9 @@
-/* vars.css */
+
 :root {
-    --primary-bg-color: #0000FF; /* Replace with the blue hex code you prefer */
-    --hover-bg-color: #0000d1; /* A darker shade for hover state */
-    --text-color: #fff; /* White text color */
-    --hover-text-color: #ccc; /* Light gray text color for hover state */
-    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card */
-    --transition-speed: 0.3s; /* Transition speed for effects */
+  --primary-bg-color: #ffffff; /* Replace with the blue hex code you prefer */
+  --hover-bg-color: #0b0b0b; /* A darker shade for hover state */
+  --text-color: #191818; /* White text color */
+  --hover-text-color: #ffffff; /* Light gray text color for hover state */
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card */
+  --transition-speed: 0.3s; /* Transition speed for effects */
 }
-
-/* vars.css */
-:root {
-    --blur-amount: 4px; /* The amount of blur to apply */
-    --transition-speed: 0.3s; /* Speed of the hover transition */
-  }
-  
-
-  /* vars.css */
-:root {
-    --blur-amount: 5px;
-    --transition-speed: 0.3s;
-  }
-  

@@ -395,9 +395,13 @@ display: none;
 
 
 
+
+
 .pl-pricing-options {
   max-width: 1080px;
   margin: 0 auto; /* Center the pricing options in the middle of the page */
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
 }
 
 .pl-plans-container {
@@ -408,14 +412,22 @@ display: none;
 }
 
 .pl-plan {
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow */
+  box-shadow: var(--card-shadow);
   width: calc(33.333% - 20px); /* Width for 3 items minus the gap */
   text-align: left; /* Align text to the left */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  transition: transform var(--transition-speed) ease; /* Smooth transition for hover effect */
+  position: relative; /* For positioning the badge absolutely within the plan */
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+}
 
+.pl-plan:hover {
+  transform: translateY(-5px); /* Move the plan up by 5 pixels on hover */
+  background-color: var(--hover-bg-color);
+  color: var(--hover-text-color);
 }
 
 .pl-plan ul {
@@ -431,39 +443,45 @@ display: none;
 
 .pl-plan li .pl-feature-icon {
   margin-right: 10px; /* Adjust the space between the icon and the text */
-  color: #000; /* Adjust color as needed */
+  color: var(--text-color); /* Adjust color as needed */
   font-weight: bold; /* Make the checkmark bold */
 }
 
 .pl-popular-badge {
   position: absolute;
-  top: -20px;
+  top: -25px;
   right: 100px; /* Adjust the position to the top-right corner of the plan */
-  background-color: #000000; /* Gold color for the popular badge */
-  color: #ffffff;
+  background-color: var(--hover-bg-color); /* Gold color for the popular badge */
+  color: var(--text-color);
   border-radius: 5px;
   font-size: 0.8em;
   padding: 5px 10px;
+  color: white;
 }
 
 .pl-plan-btn {
-  background-color: #000000; /* Adjust button color as needed */
-  color: white;
+  background-color: var(--hover-bg-color); /* Adjust button color as needed */
+  color: var(--text-color);
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 5px;
   display: inline-block; /* Align the button to the text */
   margin-top: 15px;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  color: white;
+}
+
+.pl-plan-btn:hover {
+  background-color: var(--hover-bg-color); /* Darker background on hover */
+  color: var(--hover-text-color); /* Lighter text on hover */
 }
 
 /* Styles for most popular plan */
 .pl-advanced-plan {
-  position: relative;
-  background-color: #f8f8f8; /* A light background color to highlight the plan */
+  background-color: #ffffff;
+  color:#000000 /* A light background color to highlight the plan */
 }
-.pl-plan:hover {
-  transform: translateY(-5px); /* Move the plan up by 5 pixels on hover */
-}
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 1199px) {
   .pl-plan {

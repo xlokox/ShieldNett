@@ -19,7 +19,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/path-to-your/background-image.jpg'); /* Add your background image path */
     background-size: cover;
     background-position: center;
     opacity: 0.7; /* Adjust for desired transparency level */
@@ -127,6 +126,7 @@
     padding: 20px;
     text-align: center;
     border-radius: 20px;
+    color: white;
   }
   
   .demo-vr-testimonial-section {
