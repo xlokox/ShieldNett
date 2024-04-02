@@ -4,10 +4,11 @@
 
 @media (max-width: 767px) {
   .hero-header {
-    min-height: 60vh; /* You can adjust this value to fit mobile screens */
+    min-height: 100vh; /* You can adjust this value to fit mobile screens */
     background-image: url('/photos/HeroSection.webp'); /* Optional: Different image for mobile */
     padding-top: 5px; /* Reduced padding */
-    background-attachment: scroll; /* Fixed backgrounds can be problematic on mobile */
+    background-attachment: fixed; /* Fixed backgrounds can be problematic on mobile */
+
   
   }
 }
