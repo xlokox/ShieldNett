@@ -14,19 +14,19 @@
 }
 @media (max-width: 767px) {
   .hero-header-about {
-    min-height: 60vh; /* You can adjust this value to fit mobile screens */
+    min-height: 100vh; /* You can adjust this value to fit mobile screens */
     background-image: url('/photos/AboutUsSection.webp'); /* Optional: Different image for mobile */
     padding-top: 10px; /* Reduced padding */
-    background-attachment: scroll; /* Fixed backgrounds can be problematic on mobile */
+    background-attachment: fixed; /* Fixed backgrounds can be problematic on mobile */
   }
 }
 
 @media (max-width: 767px) {
   .hero-header-services {
-    min-height: 60vh; /* You can adjust this value to fit mobile screens */
+    min-height: 100vh; /* You can adjust this value to fit mobile screens */
     background-image: url('/photos/morerealisitc.webp'); /* Optional: Different image for mobile */
     padding-top: 10px; /* Reduced padding */
-    background-attachment: scroll; /* Fixed backgrounds can be problematic on mobile */
+    background-attachment: fixed; /* Fixed backgrounds can be problematic on mobile */
   }
 }
 /* Mobile Styles */
