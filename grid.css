@@ -43,12 +43,12 @@ body {
     text-align: center;      
         margin-top: -30px; /* Adjust this value if there is a gap due to the .top-bar */
         padding-top: 20px; /* Compensate for negative margin if needed */
+        background-attachment: fixed;
         position: relative; /* Optional: Keeps the background fixed during scroll */
     
   }
 
 
-/* Position the .top-bar at the very top */
 /* Position the .top-bar at the very top with no padding at the top */
   /* Position the .top-bar at the very top */
 /* Base styles */
