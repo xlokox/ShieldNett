@@ -344,10 +344,11 @@ display: none;
 
 .feature-item {
   text-align: center;
+  margin-top: 20px;
 }
 
 .feature-icon {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   width: 450px; /* Set the size of your icons */
   height: auto;
 }
@@ -355,12 +356,13 @@ display: none;
 .feature-title {
   font-size: 1.2rem;
   color: #222;
-  margin-bottom: 10px;
+
 }
 
 .feature-description {
-  font-size: 1rem;
-  color: #666;
+  font-size: 1.2rem;
+  color: #222;
+  margin-top: -20px;
 }
 
 .cta-buttons {
@@ -386,22 +388,15 @@ display: none;
   filter: brightness(85%);
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .pl-pricing-options {
   max-width: 1080px;
   margin: 0 auto; /* Center the pricing options in the middle of the page */
   background-color: var(--primary-bg-color);
   color: var(--text-color);
+}
+.pl-pricing-title{
+  text-align: left;
+  padding-left: 15px;
 }
 
 .pl-plans-container {
@@ -409,6 +404,7 @@ display: none;
   justify-content: space-around; /* Space out the plans equally */
   flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
   gap: 20px; /* Space between each plan */
+  margin-bottom: 50px;
 }
 
 .pl-plan {
@@ -436,7 +432,6 @@ display: none;
 }
 
 .pl-plan li {
-  display: flex;
   align-items: center;
   margin-bottom: 10px; /* Add some space between the list items */
 }
@@ -480,7 +475,7 @@ display: none;
 /* Styles for most popular plan */
 .pl-advanced-plan {
   background-color: #ffffff;
-  color:#000000 /* A light background color to highlight the plan */
+  color:#000000; /* A light background color to highlight the plan */
 }
 
 /* Responsive adjustments for smaller screens */
@@ -558,7 +553,7 @@ display: none;
 }
 
 .newsletter-form button:hover {
-  background-color: #003f6f;
+  background-color: #000000;
 }
 
 .newsletter-form .disclaimer {
@@ -618,7 +613,7 @@ display: none;
 
 footer {
   background-color: #0a0a0a; /* Example background color */
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: left;
   padding: 10px;
   width: 100%; /* Footer should take full width */
@@ -627,7 +622,6 @@ footer {
 /* Ensure no other styles are interfering with footer positioning */
 footer p {
   margin: 0; /* Remove margin to prevent unnecessary spacing */
-  font-family: 'Sulphur Point', sans-serif;
 
 }
 .text-position{
