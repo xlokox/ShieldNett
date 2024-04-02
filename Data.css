@@ -266,7 +266,7 @@
   
   .offer h3 {
     font-size: 22px; /* Font size for the discount offer */
-    color: #d9534f; /* A standout color for the discount percentage */
+    color: #000000; /* A standout color for the discount percentage */
     margin-bottom: 10px; /* Space below the discount percentage */
   }
   
