@@ -71,7 +71,6 @@
   .services-description {
     color: #555;
     margin-bottom: 5rem;
-    font-family: 'Sulphur Point', sans-serif;
 
   }
   
@@ -79,12 +78,21 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
-    font-family: 'Sulphur Point', sans-serif;
 
   }
   
   .services-feature-item {
     background-color: #fff; /* White background for a clean look */
+    border: 1px solid #e1e1e1; /* Light border for some definition */
+    border-radius: 4px; /* Slightly rounded corners for a softer look */
+    padding: 20px; /* Padding for spacing inside the items */
+    margin-bottom: 20px; /* Margin at the bottom of each item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow to lift the items off the page */
+    text-align: left; /* Align the text to the left for a classic testimonial look */
+  }
+  .services-feature-item1 {
+    background-color: #fff; /* White background for a clean look */
+    margin: 10px;
     border: 1px solid #e1e1e1; /* Light border for some definition */
     border-radius: 4px; /* Slightly rounded corners for a softer look */
     padding: 20px; /* Padding for spacing inside the items */
@@ -102,6 +110,7 @@
   }
   
   .services-feature-title {
+
     font-size: 3em; /* A larger font size for the title to stand out */
     margin-bottom: 10px; /* A small margin below the title */
     font-weight: bold; /* Bold font weight for the title */
