@@ -30,34 +30,7 @@
 
 
 /* Service Section */
-@media only screen and (max-width: 768px) {
-    /* Adjust hero content styling */
-    .hero-content {
-      padding: 15px; /* Adjust padding */
-    }
-  
-    .hero-content h1 {
-      font-size: 5vw; /* Larger font size for visibility on smaller screens */
-      margin-bottom: 20px; /* Add some space below the header */
-    }
-  
-    .hero-content p {
-      font-size: 4vw; /* Adjust font size for readability on small devices */
-    }
-  
-    /* Adjust buttons for easier touch navigation */
-    .hero-buttons .btn {
-      padding: 10px 20px; /* Adjust padding for the button */
-      font-size: 4vw; /* Adjust font size for the button text */
-      margin: 10px 2px; /* Adjust margins for better spacing */
-    }
-  
-    /* Increase tap target size for mobile users */
-    .hero-buttons {
-      margin-top: 20px;
-    }
-  }
-  
+
 /* We offer section "Ai Powered" */
 @media only screen and (max-width: 768px) {
     .services-ai-firewall-section {
@@ -110,7 +83,13 @@
 /* Styles for mobile devices */
 
   
-   
+@media (max-width: 768px) {
+  /* Adjustments for very small screens, if necessary */
+  .testimonial-logo {
+    width: 70%; /* Adjust size based on your design preference */
+  }
+}
+
     @media only screen and (max-width: 768px) {
       .services-ai-firewall-section {
         padding: 20px;
